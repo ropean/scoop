@@ -25,9 +25,9 @@ jobs:
             ## 🚀 Release ${{ github.ref_name }}
 
             ### 📦 Downloads
-            只需下载下面的 .exe 文件即可使用
+            Simply download the .exe file below to use it.
 
-            > 注意：请忽略下方的 Source code 压缩包
+            > Note: the source code zip file includes entire repository.
           generate_release_notes: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
