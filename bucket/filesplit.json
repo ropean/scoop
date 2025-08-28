@@ -6,10 +6,6 @@
   "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/FileSplit.exe",
   "hash": "7910A6E02CE1FE5B519633EFB910F173CAC517D56665A75B50054E0D9656F554",
   "bin": "FileSplit.exe",
-  "checkver": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
-    "re": "v([\\d.]+)"
-  },
   "autoupdate": {
     "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/FileSplit.exe"
   },

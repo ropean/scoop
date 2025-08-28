@@ -6,10 +6,6 @@
   "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/BestPwd.exe",
   "hash": "1BBCA3F0BB4D5DFDBD92A1E3D60CCE2A4CDA4B51F218072A594D71B6E76DC54A",
   "bin": "BestPwd.exe",
-  "checkver": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
-    "re": "v([\\d.]+)"
-  },
   "autoupdate": {
     "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/BestPwd.exe"
   },

@@ -6,10 +6,6 @@
   "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/CssImageDownload.exe",
   "hash": "887FC6F397775528F5569E79201E9B64F75DE1CBA63D0651520D2B2ED3030B77",
   "bin": "CssImageDownload.exe",
-  "checkver": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
-    "re": "v([\\d.]+)"
-  },
   "autoupdate": {
     "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/CssImageDownload.exe"
   },

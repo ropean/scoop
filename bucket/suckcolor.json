@@ -6,10 +6,6 @@
   "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/SuckColor.exe",
   "hash": "3D7211EB80E0EB52C364FA76D50BA30D9A56675F9E5E6B22A0C614B13E68568E",
   "bin": "SuckColor.exe",
-  "checkver": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
-    "re": "v([\\d.]+)"
-  },
   "autoupdate": {
     "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/SuckColor.exe"
   },

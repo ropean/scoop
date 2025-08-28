@@ -6,10 +6,6 @@
   "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/MyExplorer.exe",
   "hash": "50D59C88850CC3F843739B96A7001EBCC98ECDF47928AB37F53819CDCA2B91F8",
   "bin": "MyExplorer.exe",
-  "checkver": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
-    "re": "v([\\d.]+)"
-  },
   "autoupdate": {
     "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/MyExplorer.exe"
   },

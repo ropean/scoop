@@ -6,10 +6,6 @@
   "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/Music2SD.exe",
   "hash": "B0907538AE381153E777AE565ED52B83CDBCF9B807C965961315B5FE6E96BA69",
   "bin": "Music2SD.exe",
-  "checkver": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
-    "re": "v([\\d.]+)"
-  },
   "autoupdate": {
     "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/Music2SD.exe"
   },

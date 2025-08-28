@@ -6,10 +6,6 @@
   "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/HttpStatus.exe",
   "hash": "9A750739CC9BCAFE715044250984E7B1A34D217C51920037B4AE35917B269FC5",
   "bin": "HttpStatus.exe",
-  "checkver": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
-    "re": "v([\\d.]+)"
-  },
   "autoupdate": {
     "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/HttpStatus.exe"
   },

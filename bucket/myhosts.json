@@ -6,10 +6,6 @@
   "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/MyHosts.exe",
   "hash": "7D3AE75A1D0707A3EDF1B8902B8CBD029C3EE72E37A46E7716DFC93A9CA1218B",
   "bin": "MyHosts.exe",
-  "checkver": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
-    "re": "v([\\d.]+)"
-  },
   "autoupdate": {
     "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/MyHosts.exe"
   },
