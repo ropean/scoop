@@ -3,11 +3,14 @@
   "description": "Music to SD card transfer utility for Windows",
   "homepage": "https://github.com/ropean/scoop-ropean",
   "license": "MIT",
-  "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/Music2SD.exe",
+  "url": "https://github.com/ropean/scoop-ropean/releases/download/v1.0.0/Music2SD.exe",
   "hash": "B0907538AE381153E777AE565ED52B83CDBCF9B807C965961315B5FE6E96BA69",
   "bin": "Music2SD.exe",
+  "checkver": {
+    "github": "ropean/scoop-ropean"
+  },
   "autoupdate": {
-    "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/Music2SD.exe"
+    "url": "https://github.com/ropean/scoop-ropean/releases/download/v$version/Music2SD.exe"
   },
   "shortcuts": [["Music2SD.exe", "Music2SD", "Music to SD card transfer"]],
   "notes": "Music2SD is a utility that helps you transfer music files to SD cards and other removable storage devices."

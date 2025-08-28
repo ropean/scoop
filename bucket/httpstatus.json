@@ -3,11 +3,14 @@
   "description": "HTTP status checker utility for Windows",
   "homepage": "https://github.com/ropean/scoop-ropean",
   "license": "MIT",
-  "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/HttpStatus.exe",
+  "url": "https://github.com/ropean/scoop-ropean/releases/download/v1.0.0/HttpStatus.exe",
   "hash": "9A750739CC9BCAFE715044250984E7B1A34D217C51920037B4AE35917B269FC5",
   "bin": "HttpStatus.exe",
+  "checkver": {
+    "github": "ropean/scoop-ropean"
+  },
   "autoupdate": {
-    "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/HttpStatus.exe"
+    "url": "https://github.com/ropean/scoop-ropean/releases/download/v$version/HttpStatus.exe"
   },
   "shortcuts": [["HttpStatus.exe", "HttpStatus", "HTTP status checker"]],
   "notes": "HttpStatus is a utility that checks HTTP status codes for websites and URLs."
