@@ -3,7 +3,7 @@
   "description": "CSS image downloader utility for Windows",
   "homepage": "https://github.com/ropean/scoop-ropean",
   "license": "MIT",
-  "url": "https://github.com/ropean/scoop-ropean/releases/download/v1.0.0/CssImageDownload.exe",
+  "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/CssImageDownload.exe",
   "hash": "887FC6F397775528F5569E79201E9B64F75DE1CBA63D0651520D2B2ED3030B77",
   "bin": "CssImageDownload.exe",
   "checkver": {
@@ -11,7 +11,7 @@
     "re": "v([\\d.]+)"
   },
   "autoupdate": {
-    "url": "https://github.com/ropean/scoop-ropean/releases/download/v$version/CssImageDownload.exe"
+    "url": "https://raw.githubusercontent.com/ropean/scoop-ropean/refs/heads/main/apps/CssImageDownload.exe"
   },
   "shortcuts": [["CssImageDownload.exe", "CssImageDownload", "CSS image downloader"]],
   "notes": "CssImageDownload is a utility that helps you download images referenced in CSS files."
