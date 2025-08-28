@@ -59,4 +59,4 @@ scoop update <app>       # update a specific app
 
 ### License
 
-MIT
+Proprietary. See `LICENSE.txt`.

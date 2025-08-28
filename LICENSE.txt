@@ -1,0 +1,28 @@
+End User License Agreement (EULA)
+
+1. License Grant
+   You are granted a non-exclusive, non-transferable license to install and use the accompanying software ("Software") on your own devices for personal and/or commercial use.
+
+2. Restrictions
+   You may not modify, reverse engineer, decompile, disassemble, distribute, sublicense, rent, lease, or make the Software available to third parties except as expressly permitted by this EULA.
+
+3. Ownership
+   The Software is licensed, not sold. All rights, title, and interest in and to the Software remain with the Licensor.
+
+4. Updates
+   Updates may be provided at the Licensor's discretion. This EULA applies to any updates unless a different license is provided.
+
+5. Warranty Disclaimer
+   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+6. Limitation of Liability
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE LICENSOR SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE.
+
+7. Termination
+   This EULA terminates upon breach. Upon termination, you must cease use and destroy all copies of the Software.
+
+8. Governing Law
+   This EULA is governed by the laws of [Your Jurisdiction].
+
+Licensor: ropean
+
