@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "Color picker utility for Windows",
+  "homepage": "https://github.com/ropean/scoop-ropean",
+  "license": "MIT",
+  "url": "https://github.com/ropean/scoop-ropean/releases/download/v1.0.0/SuckColor.exe",
+  "hash": "3D7211EB80E0EB52C364FA76D50BA30D9A56675F9E5E6B22A0C614B13E68568E",
+  "bin": "SuckColor.exe",
+  "checkver": {
+    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
+    "re": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/ropean/scoop-ropean/releases/download/v$version/SuckColor.exe"
+  },
+  "shortcuts": [["SuckColor.exe", "SuckColor", "Color picker utility"]],
+  "notes": "SuckColor is a color picker utility that helps you capture and identify colors from anywhere on your screen."
+}

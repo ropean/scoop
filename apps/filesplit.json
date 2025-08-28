@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "File splitting utility for Windows",
+  "homepage": "https://github.com/ropean/scoop-ropean",
+  "license": "MIT",
+  "url": "https://github.com/ropean/scoop-ropean/releases/download/v1.0.0/FileSplit.exe",
+  "hash": "7910A6E02CE1FE5B519633EFB910F173CAC517D56665A75B50054E0D9656F554",
+  "bin": "FileSplit.exe",
+  "checkver": {
+    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
+    "re": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/ropean/scoop-ropean/releases/download/v$version/FileSplit.exe"
+  },
+  "shortcuts": [["FileSplit.exe", "FileSplit", "File splitting utility"]],
+  "notes": "FileSplit is a utility that helps you split large files into smaller manageable chunks."
+}

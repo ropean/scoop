@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "description": "A collection of useful Windows utility tools including password management, file operations, image processing, and system utilities",
+  "homepage": "https://github.com/ropean/scoop-ropean",
+  "license": "MIT",
+  "url": "https://github.com/ropean/scoop-ropean/releases/download/v1.0.0/scoop-ropean-v1.0.0.zip",
+  "hash": "",
+  "bin": ["BestPwd.exe", "CssImageDownload.exe", "FileSplit.exe", "HttpStatus.exe", "Music2SD.exe", "MyExplorer.exe", "MyHosts.exe", "SuckColor.exe"],
+  "checkver": {
+    "url": "https://github.com/ropean/scoop-ropean/releases/latest",
+    "re": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/ropean/scoop-ropean/releases/download/v$version/scoop-ropean-v$version.zip"
+  },
+  "shortcuts": [
+    ["BestPwd.exe", "BestPwd", "Password management utility"],
+    ["MyExplorer.exe", "MyExplorer", "Enhanced file explorer"],
+    ["MyHosts.exe", "MyHosts", "Hosts file editor"]
+  ],
+  "notes": [
+    "This package installs a collection of Windows utility tools:",
+    "- BestPwd: Password management utility",
+    "- CssImageDownload: CSS image downloader",
+    "- FileSplit: File splitting utility",
+    "- HttpStatus: HTTP status checker",
+    "- Music2SD: Music to SD card transfer",
+    "- MyExplorer: Enhanced file explorer",
+    "- MyHosts: Hosts file editor",
+    "- SuckColor: Color picker utility"
+  ]
+}
