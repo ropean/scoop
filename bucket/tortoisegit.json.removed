@@ -1,0 +1,58 @@
+{
+  "version": "2.17.0.2",
+  "description": "TortoiseGit, a Windows shell extension for Git version control",
+  "homepage": "https://tortoisegit.org/",
+  "license": "GPL-2.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://download.tortoisegit.org/tgit/2.17.0.0/TortoiseGit-2.17.0.2-64bit.msi",
+      "hash": "66ca43f34e1beefc50df67335d8cbf75f29ae5bad66e678fa673f40f53649961"
+    },
+    "32bit": {
+      "url": "https://download.tortoisegit.org/tgit/2.17.0.0/TortoiseGit-2.17.0.2-32bit.msi",
+      "hash": "f90d42d5730befcd2680b5cd89c6037be1f3f8f5f459b33f83704883dd561b19"
+    },
+    "arm64": {
+      "url": "https://download.tortoisegit.org/tgit/2.17.0.0/TortoiseGit-2.17.0.2-arm64.msi",
+      "hash": "86d773802f75bbc40270b6b773b44ba7705d61e32c66782487b32cef8b965068"
+    }
+  },
+  "installer": {
+    "script": [
+      "if (!(Test-Path \"$env:SCOOP\\persist\\tortoisegit\\settings\")) { New-Item -Path \"$env:SCOOP\\persist\\tortoisegit\\settings\" -ItemType Directory | Out-Null }",
+      "if ($global) { warn 'TortoiseGit installed globally may cause issues with Scoop''s portable model.' }"
+    ]
+  },
+  "post_install": [
+    "Write-Host 'TortoiseGit installed. To enable Windows Explorer context menu integration, run \"TortoiseGitProc.exe /command:settings\" from the installation directory or use the official installer manually.'"
+  ],
+  "bin": ["TortoiseGitProc.exe", "TortoiseGitMerge.exe", "TortoiseGitIDiff.exe", "TortoiseGitUDiff.exe", "GitWCRev.exe"],
+  "shortcuts": [
+    [
+      "Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe",
+      "TortoiseGit",
+      "TortoiseGit provides overlay icons showing the file status, a powerful context menu for Git and much more!"
+    ]
+  ],
+  "checkver": {
+    "url": "https://tortoisegit.org/download/",
+    "regex": "The current stable version is: ([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://download.tortoisegit.org/tgit/$version/TortoiseGit-$version-64bit.msi"
+      },
+      "32bit": {
+        "url": "https://download.tortoisegit.org/tgit/$version/TortoiseGit-$version-32bit.msi"
+      },
+      "arm64": {
+        "url": "https://download.tortoisegit.org/tgit/$version/TortoiseGit-$version-arm64.msi"
+      }
+    }
+  },
+  "notes": [
+    "Language packs are available at https://download.tortoisegit.org/tgit/2.17.0.0/. Install manually or create a separate Scoop manifest for language packs.",
+    "For full shell integration, you may need to run the official installer manually after Scoop installation or use TortoiseGit''s settings to enable it."
+  ]
+}
