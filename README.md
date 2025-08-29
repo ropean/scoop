@@ -48,7 +48,7 @@ scoop update <app>       # update a specific app
 
 ### Versioning and updates
 
-- Packages download release assets from `ropean/scoop-ropean` GitHub Releases (tags like `v1.0.0`).
+- Packages download release assets from `ropean/scoop-ropean` GitHub Releases (tags like `v1.0.1`).
 - Manifests are configured with GitHub `checkver` and `autoupdate` so new releases are picked up automatically.
 
 ### Contributing
