@@ -12,6 +12,6 @@
   "autoupdate": {
     "url": "https://github.com/ropean/csharp-hash/releases/download/v$version/CSharpHash.exe"
   },
-  "shortcuts": [["CSharpHash.exe", "C Hash", "File hashing utility"]],
+  "shortcuts": [["CSharpHash.exe", "C# Hash256", "File hashing utility"]],
   "notes": "A simple WPF application for computing SHA256 hashes of files."
 }
