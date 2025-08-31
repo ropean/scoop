@@ -1,10 +1,10 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "File hashing utility for Windows",
   "homepage": "https://github.com/ropean/rust-hash/",
   "license": { "identifier": "MIT", "url": "https://github.com/ropean/rust-hash/blob/main/LICENSE" },
-  "url": "https://github.com/ropean/rust-hash/releases/download/v0.2.0/rust-hash.exe",
-  "hash": "e91c22a51ba88f8c72fdd4778920b01da63b10a505f9598820e4ac28081c950f",
+  "url": "https://github.com/ropean/rust-hash/releases/download/v0.2.1/rust-hash.exe",
+  "hash": "9334c28bafd570f0a9306ae08ba56998f5f13490720a779ee3b0b1795d4c4dea",
   "bin": "rust-hash.exe",
   "checkver": {
     "github": "ropean/rust-hash"

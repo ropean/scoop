@@ -1,10 +1,10 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Windows C++ GUI hasher",
   "homepage": "https://github.com/ropean/c-hash/",
   "license": { "identifier": "MIT", "url": "https://github.com/ropean/c-hash/blob/main/LICENSE" },
-  "url": "https://github.com/ropean/c-hash/releases/download/v1.1.0/c-hash.exe",
-  "hash": "bd9bcd79e0520bfeb14a9cec901218f87998ff020ad092b8733871b2394e250b",
+  "url": "https://github.com/ropean/c-hash/releases/download/v1.1.1/c-hash.exe",
+  "hash": "16e5926db9338d346e445377b1dffea4f42ea44148a8456803bbfff3b4857e32",
   "bin": "c-hash.exe",
   "checkver": {
     "github": "ropean/c-hash"
