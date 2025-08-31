@@ -1,16 +1,16 @@
 {
-  "version": "1.0.1",
+  "version": "0.2.0",
   "description": "File hashing utility for Windows",
-  "homepage": "https://github.com/ropean/windows-tools",
-  "license": { "identifier": "Proprietary", "url": "https://github.com/ropean/windows-tools/blob/main/LICENSE.txt" },
-  "url": "https://github.com/ropean/windows-tools/releases/download/v1.0.1/rust-hash.exe",
-  "hash": "4D24B2D21577190345CC19A10E900D9089ACBEEEBAD1DFEE54C454A9D78D3D85",
+  "homepage": "https://github.com/ropean/rust-hash/",
+  "license": { "identifier": "Proprietary", "url": "https://github.com/ropean/rust-hash/blob/main/LICENSE.txt" },
+  "url": "https://github.com/ropean/rust-hash/releases/download/v0.2.0/rust-hash.exe",
+  "hash": "e91c22a51ba88f8c72fdd4778920b01da63b10a505f9598820e4ac28081c950f",
   "bin": "rust-hash.exe",
   "checkver": {
-    "github": "ropean/scoop-ropean"
+    "github": "ropean/rust-hash"
   },
   "autoupdate": {
-    "url": "https://github.com/ropean/windows-tools/releases/download/v$version/rust-hash.exe"
+    "url": "https://github.com/ropean/rust-hash/releases/download/v$version/rust-hash.exe"
   },
   "shortcuts": [["rust-hash.exe", "Rust Hash", "File hashing utility"]],
   "notes": "Rust Hash computes cryptographic hashes of files."
