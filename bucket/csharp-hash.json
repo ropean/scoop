@@ -1,0 +1,17 @@
+{
+  "version": "0.1.5",
+  "description": "C# Hash256",
+  "homepage": "https://github.com/ropean/csharp-hash/",
+  "license": { "identifier": "MIT", "url": "https://github.com/ropean/csharp-hash/blob/main/LICENSE" },
+  "url": "https://github.com/ropean/csharp-hash/releases/download/v0.1.5/CSharpHash.exe",
+  "hash": "9ae096118786bf706946a83c613096341850a47c0191a071139a62fb6668f9c1",
+  "bin": "CSharpHash.exe",
+  "checkver": {
+    "github": "ropean/csharp-hash"
+  },
+  "autoupdate": {
+    "url": "https://github.com/ropean/csharp-hash/releases/download/v$version/CSharpHash.exe"
+  },
+  "shortcuts": [["CSharpHash.exe", "C Hash", "File hashing utility"]],
+  "notes": "A simple WPF application for computing SHA256 hashes of files."
+}
