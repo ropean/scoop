@@ -1,10 +1,10 @@
 {
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "C# Hash256",
   "homepage": "https://github.com/ropean/csharp-hash/",
   "license": { "identifier": "MIT", "url": "https://github.com/ropean/csharp-hash/blob/main/LICENSE" },
-  "url": "https://github.com/ropean/csharp-hash/releases/download/v0.1.8/CSharpHash.exe",
-  "hash": "3d8c0231a80e6e05f4e77555179286334e50ba0a5b4d030d29a6809748a2ab34",
+  "url": "https://github.com/ropean/csharp-hash/releases/download/v0.2.0/CSharpHash.exe",
+  "hash": "47d0bb8fa87c27663cace4def58a3b2df9e4daa5b90fa30c39046e17ee41bef2",
   "bin": "CSharpHash.exe",
   "checkver": {
     "github": "ropean/csharp-hash"
