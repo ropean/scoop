@@ -1,16 +1,16 @@
 {
-  "version": "1.0.1",
+  "version": "0.2.0",
   "description": "Hosts file editor utility for Windows",
-  "homepage": "https://github.com/ropean/windows-tools",
-  "license": { "identifier": "Proprietary", "url": "https://github.com/ropean/windows-tools/blob/main/LICENSE.txt" },
-  "url": "https://github.com/ropean/windows-tools/releases/download/v1.0.1/MyHosts.exe",
-  "hash": "7D3AE75A1D0707A3EDF1B8902B8CBD029C3EE72E37A46E7716DFC93A9CA1218B",
+  "homepage": "https://github.com/ropean/MyHosts",
+  "license": { "identifier": "MIT", "url": "https://github.com/ropean/MyHosts/blob/main/LICENSE" },
+  "url": "https://github.com/ropean/MyHosts/releases/download/v0.2.0/MyHosts.exe",
+  "hash": "2233d40f48c80fc0a252a9505836f077ddd9ea47bbc828eeb8600e9dffbee4ad",
   "bin": "MyHosts.exe",
   "checkver": {
-    "github": "ropean/scoop-ropean"
+    "github": "ropean/MyHosts"
   },
   "autoupdate": {
-    "url": "https://github.com/ropean/windows-tools/releases/download/v$version/MyHosts.exe"
+    "url": "https://github.com/ropean/MyHosts/releases/download/v$version/MyHosts.exe"
   },
   "shortcuts": [["MyHosts.exe", "MyHosts", "Hosts file editor"]],
   "notes": "MyHosts is a utility that helps you edit and manage the Windows hosts file for network configuration and blocking."
