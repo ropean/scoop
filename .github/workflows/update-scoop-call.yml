@@ -58,8 +58,11 @@ on:
         default: ''
     secrets:
       deploy_key:
-        description: 'Deploy key for pushing changes to the repository'
+        description: 'Deploy key for pushing changes to https://github.com/ropean/scoop-ropean'
         required: true
+      source_repo_token:
+        description: 'GitHub App or CI token for accessing source repository (optional, required for private repos)'
+        required: false
 
 jobs:
   update-scoop:
@@ -96,9 +99,14 @@ jobs:
 
       - name: Download release asset
         run: |
-          # Find the correct asset URL for the executable 
+          # Download release asset (works for both public and private repos)
           ASSET_URL="https://github.com/${{ inputs.source_repo }}/releases/download/${{ steps.get_version.outputs.VERSION_NUMBER }}/${{ inputs.exe_name }}"
-          curl -L -o "${{ inputs.exe_name }}" "$ASSET_URL"
+
+          # Always use token authentication (empty token is ignored for public repos)
+          curl -H "Authorization: token ${{ secrets.source_repo_token }}" \
+               -H "Accept: application/octet-stream" \
+               -L -o "${{ inputs.exe_name }}" "$ASSET_URL"
+
           echo "DOWNLOAD_URL=$ASSET_URL" >> $GITHUB_ENV
 
       - name: Calculate hash
@@ -107,7 +115,7 @@ jobs:
           HASH=$(sha256sum "${{ inputs.exe_name }}" | cut -d' ' -f1)
           echo "HASH=$HASH" >> $GITHUB_OUTPUT
 
-      - name: Setup Deploy Key
+      - name: Setup Deploy Key for Target Repository
         run: |
           # Create SSH directory and set permissions
           mkdir -p ~/.ssh
@@ -125,7 +133,7 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
-      - name: Checkout current repository
+      - name: Checkout target repository (scoop-ropean)
         uses: actions/checkout@v4
         with:
           ssh-key: ${{ secrets.deploy_key }}
@@ -139,6 +147,9 @@ jobs:
         run: |
           VERSION="${{ steps.get_version.outputs.VERSION_NUMBER }}"
           HASH="${{ steps.get_hash.outputs.HASH }}"
+
+          # Ensure bucket directory exists
+          mkdir -p bucket
 
           # Create the JSON manifest
           cat > manifest.json << EOF
