@@ -6,7 +6,7 @@
     "identifier": "MIT",
     "url": "https://github.com/ropean/MyHosts/blob/main/LICENSE"
   },
-  "url": "https://github.com/ropean/MyHosts/releases/download/0.0.7/MyHosts.exe",
+  "url": "https://github.com/ropean/MyHosts/releases/download/v0.0.7/MyHosts.exe",
   "hash": "80acbf35cd66ce7dcd83c118455c06be4998a8e3b7ca4b02c9e30d45f1d93bf9",
   "bin": "MyHosts.exe",
   "checkver": {
