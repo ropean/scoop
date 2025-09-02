@@ -149,7 +149,7 @@ jobs:
         run: |
           # Ensure bucket directory exists
           mkdir -p bucket
-          
+
           # Check if manifest already exists
           if [ -f "bucket/${{ inputs.app_name }}.json" ]; then
             echo "Existing manifest found, backing up..."
@@ -228,7 +228,7 @@ jobs:
 
           # Add the latest manifest
           git add bucket/${{ inputs.app_name }}.json
-          
+
           # Add backup of previous version (if it exists and is different)
           if [ -n "${{ steps.backup_manifest.outputs.CURRENT_VERSION }}" ] && [ "${{ steps.backup_manifest.outputs.CURRENT_VERSION }}" != "$VERSION" ]; then
             git add bucket/${{ inputs.app_name }}@${{ steps.backup_manifest.outputs.CURRENT_VERSION }}.json
