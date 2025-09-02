@@ -56,6 +56,10 @@ on:
         required: false
         type: string
         default: ''
+    secrets:
+      deploy_key:
+        description: 'Deploy key for pushing changes to the repository'
+        required: true
 
 jobs:
   update-scoop:
@@ -103,8 +107,28 @@ jobs:
           HASH=$(sha256sum "${{ inputs.exe_name }}" | cut -d' ' -f1)
           echo "HASH=$HASH" >> $GITHUB_OUTPUT
 
+      - name: Setup Deploy Key
+        run: |
+          # Create SSH directory and set permissions
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          # Add the deploy key to SSH agent
+          echo "${{ secrets.deploy_key }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          # Start SSH agent and add the key
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/deploy_key
+
+          # Add GitHub to known hosts
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
       - name: Checkout current repository
         uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.deploy_key }}
 
       - name: Configure Git
         run: |
