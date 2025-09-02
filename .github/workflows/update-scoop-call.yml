@@ -256,6 +256,9 @@ jobs:
             
             git commit -m "$COMMIT_MSG"
             
+            # Pull latest changes before pushing to avoid conflicts
+            git pull origin main --rebase
+            
             git push origin main
             echo "Successfully updated ${{ inputs.app_name }} to version $VERSION"
           fi
