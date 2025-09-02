@@ -100,7 +100,7 @@ jobs:
       - name: Download release asset
         run: |
           # Download release asset (works for both public and private repos)
-          ASSET_URL="https://github.com/${{ inputs.source_repo }}/releases/download/${{ steps.get_version.outputs.VERSION_NUMBER }}/${{ inputs.exe_name }}"
+          ASSET_URL="https://github.com/${{ inputs.source_repo }}/releases/download/${{ steps.get_version.outputs.VERSION }}/${{ inputs.exe_name }}"
 
           # Always use token authentication (empty token is ignored for public repos)
           curl -H "Authorization: token ${{ secrets.source_repo_token }}" \
