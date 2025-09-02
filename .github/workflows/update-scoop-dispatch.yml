@@ -41,6 +41,21 @@ on:
         required: false
         type: string
         default: ''
+      shortcut_name:
+        description: 'Shortcut display name'
+        required: false
+        type: string
+        default: ''
+      shortcut_description:
+        description: 'Shortcut description'
+        required: false
+        type: string
+        default: ''
+      notes:
+        description: 'Additional notes for the package'
+        required: false
+        type: string
+        default: ''
 
 jobs:
   update-scoop:
@@ -68,6 +83,12 @@ jobs:
             LICENSE_URL="https://github.com/${{ inputs.source_repo }}/blob/main/LICENSE"
           fi
           echo "LICENSE_URL=$LICENSE_URL" >> $GITHUB_OUTPUT
+
+          SHORTCUT_NAME="${{ inputs.shortcut_name }}"
+          if [ -z "$SHORTCUT_NAME" ]; then
+            SHORTCUT_NAME="${{ inputs.app_name }}"
+          fi
+          echo "SHORTCUT_NAME=$SHORTCUT_NAME" >> $GITHUB_OUTPUT
 
       - name: Download release asset
         run: |
@@ -116,6 +137,18 @@ jobs:
             }
           }
           EOF
+
+          # Add shortcuts if provided
+          if [ -n "${{ inputs.shortcut_name }}" ] && [ -n "${{ inputs.shortcut_description }}" ]; then
+            jq --arg exe "${{ inputs.exe_name }}" --arg name "${{ steps.defaults.outputs.SHORTCUT_NAME }}" --arg desc "${{ inputs.shortcut_description }}" '. + {"shortcuts": [[$exe, $name, $desc]]}' manifest.json > temp.json
+            mv temp.json manifest.json
+          fi
+
+          # Add notes if provided
+          if [ -n "${{ inputs.notes }}" ]; then
+            jq --arg notes "${{ inputs.notes }}" '. + {"notes": $notes}' manifest.json > temp.json
+            mv temp.json manifest.json
+          fi
 
           # Format JSON properly
           jq . manifest.json > bucket/${{ inputs.app_name }}.json
