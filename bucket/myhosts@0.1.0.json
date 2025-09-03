@@ -1,13 +1,13 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Hosts file editor utility for Windows",
   "homepage": "https://github.com/ropean/MyHosts",
   "license": {
     "identifier": "MIT",
     "url": "https://github.com/ropean/MyHosts/blob/main/LICENSE"
   },
-  "url": "https://github.com/ropean/MyHosts/releases/download/v0.1.1/MyHosts.exe",
-  "hash": "c0144e2166d30c4ce6a4fd36613d8923a2c204c7e9658ef9bad62ccc4fd5a786",
+  "url": "https://github.com/ropean/MyHosts/releases/download/v0.1.0/MyHosts.exe",
+  "hash": "13a3ecf4dce405969a2badafdbfbcb76f3fae19ae3793faf1d7f30cc56a93a86",
   "bin": "MyHosts.exe",
   "checkver": {
     "github": "ropean/MyHosts"
