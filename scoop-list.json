@@ -19,6 +19,13 @@
         {
             "Info": "",
             "Source": "main",
+            "Name": "amass",
+            "Version": "4.2.0",
+            "Updated": "\/Date(1757045462924)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
             "Name": "android-clt",
             "Version": "13114758",
             "Updated": "\/Date(1756217157546)\/"
@@ -40,13 +47,6 @@
         {
             "Info": "",
             "Source": "extras",
-            "Name": "autohotkey",
-            "Version": "2.0.19",
-            "Updated": "\/Date(1756219183109)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
             "Name": "bat2exe",
             "Version": "2.2",
             "Updated": "\/Date(1756865700182)\/"
@@ -60,17 +60,10 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "bun",
-            "Version": "1.2.21",
-            "Updated": "\/Date(1756131221106)\/"
-        },
-        {
-            "Info": "",
             "Source": "ropean",
             "Name": "c-hash",
-            "Version": "1.1.2",
-            "Updated": "\/Date(1756700011993)\/"
+            "Version": "1.2.0",
+            "Updated": "\/Date(1757006044504)\/"
         },
         {
             "Info": "",
@@ -90,8 +83,8 @@
             "Info": "",
             "Source": "main",
             "Name": "cargo-binstall",
-            "Version": "1.15.3",
-            "Updated": "\/Date(1756915564163)\/"
+            "Version": "1.15.4",
+            "Updated": "\/Date(1757445398227)\/"
         },
         {
             "Info": "",
@@ -117,16 +110,16 @@
         {
             "Info": "",
             "Source": "ropean",
-            "Name": "csharphash",
-            "Version": "0.2.0",
-            "Updated": "\/Date(1756702663996)\/"
+            "Name": "csharp-hash",
+            "Version": "0.3.0",
+            "Updated": "\/Date(1757006560226)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "cursor",
-            "Version": "1.5.9",
-            "Updated": "\/Date(1756906258005)\/"
+            "Version": "1.5.11",
+            "Updated": "\/Date(1757445421668)\/"
         },
         {
             "Info": "",
@@ -154,7 +147,7 @@
             "Source": "main",
             "Name": "ffmpeg",
             "Version": "8.0",
-            "Updated": "\/Date(1756915095861)\/"
+            "Updated": "\/Date(1756960035110)\/"
         },
         {
             "Info": "",
@@ -176,6 +169,13 @@
             "Name": "filezilla",
             "Version": "3.69.1",
             "Updated": "\/Date(1750169991154)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "flutter",
+            "Version": "3.35.3",
+            "Updated": "\/Date(1757445615505)\/"
         },
         {
             "Info": "",
@@ -244,8 +244,8 @@
             "Info": "",
             "Source": "main",
             "Name": "hugo",
-            "Version": "0.149.0",
-            "Updated": "\/Date(1756342563307)\/"
+            "Version": "0.150.0",
+            "Updated": "\/Date(1757445619478)\/"
         },
         {
             "Info": "",
@@ -299,37 +299,9 @@
         {
             "Info": "",
             "Source": "main",
-            "Name": "nodejs",
-            "Version": "24.7.0",
-            "Updated": "\/Date(1756342575111)\/"
-        },
-        {
-            "Info": "",
-            "Source": "versions",
-            "Name": "nodejs22",
-            "Version": "22.19.0",
-            "Updated": "\/Date(1756599812842)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
             "Name": "nuget",
             "Version": "6.14.0",
             "Updated": "\/Date(1750170037124)\/"
-        },
-        {
-            "Info": "",
-            "Source": "java",
-            "Name": "openjdk",
-            "Version": "24.0.2-12",
-            "Updated": "\/Date(1756131279161)\/"
-        },
-        {
-            "Info": "",
-            "Source": "java",
-            "Name": "openjdk17",
-            "Version": "17.0.2-8",
-            "Updated": "\/Date(1739772923647)\/"
         },
         {
             "Info": "",
@@ -357,35 +329,21 @@
             "Source": "main",
             "Name": "php",
             "Version": "8.4.12",
-            "Updated": "\/Date(1756342597587)\/"
-        },
-        {
-            "Info": "",
-            "Source": "versions",
-            "Name": "php70",
-            "Version": "7.0.33",
-            "Updated": "\/Date(1739768499553)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Name": "pnpm",
-            "Version": "10.15.1",
-            "Updated": "\/Date(1756939101635)\/"
+            "Updated": "\/Date(1757297469181)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "postman",
-            "Version": "11.61.5",
-            "Updated": "\/Date(1756939119616)\/"
+            "Version": "11.62.1",
+            "Updated": "\/Date(1757445635030)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "potplayer",
-            "Version": "250625",
-            "Updated": "\/Date(1756219047064)\/"
+            "Version": "250909",
+            "Updated": "\/Date(1757445642199)\/"
         },
         {
             "Info": "",
@@ -393,6 +351,13 @@
             "Name": "process-explorer",
             "Version": "17.06",
             "Updated": "\/Date(1756223189989)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "putty",
+            "Version": "0.83",
+            "Updated": "\/Date(1757300973031)\/"
         },
         {
             "Info": "",
@@ -411,6 +376,13 @@
         {
             "Info": "",
             "Source": "extras",
+            "Name": "rapidee",
+            "Version": "9.2.937",
+            "Updated": "\/Date(1757446343520)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
             "Name": "revouninstaller",
             "Version": "2.6.0",
             "Updated": "\/Date(1756225202086)\/"
@@ -419,8 +391,8 @@
             "Info": "",
             "Source": "ropean",
             "Name": "rust-hash",
-            "Version": "0.2.2",
-            "Updated": "\/Date(1756700014238)\/"
+            "Version": "0.2.4",
+            "Updated": "\/Date(1757006066912)\/"
         },
         {
             "Info": "",
@@ -482,8 +454,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "unigetui",
-            "Version": "3.3.2",
-            "Updated": "\/Date(1756915362876)\/"
+            "Version": "3.3.3",
+            "Updated": "\/Date(1757445653078)\/"
         },
         {
             "Info": "",
@@ -491,6 +463,13 @@
             "Name": "upx",
             "Version": "5.0.2",
             "Updated": "\/Date(1756438451096)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "vcredist-aio",
+            "Version": "0.92.0",
+            "Updated": "\/Date(1757447314925)\/"
         },
         {
             "Info": "",
@@ -508,6 +487,20 @@
         },
         {
             "Info": "",
+            "Source": "main",
+            "Name": "volta",
+            "Version": "2.0.2",
+            "Updated": "\/Date(1757445465638)\/"
+        },
+        {
+            "Info": "",
+            "Source": "vsbuildtools",
+            "Name": "vsbuildtools2019",
+            "Version": "16.11.51",
+            "Updated": "\/Date(1757449768465)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "vscode",
             "Version": "1.103.2",
@@ -517,15 +510,22 @@
             "Info": "",
             "Source": "extras",
             "Name": "warp-terminal",
-            "Version": "0.2025.09.01.20.54.stable_04",
-            "Updated": "\/Date(1756939135913)\/"
+            "Version": "0.2025.09.03.08.11.stable_03",
+            "Updated": "\/Date(1757445664526)\/"
         },
         {
             "Info": "",
             "Source": "main",
-            "Name": "yarn",
-            "Version": "1.22.22",
-            "Updated": "\/Date(1739770270835)\/"
+            "Name": "yt-dlp",
+            "Version": "2025.09.05",
+            "Updated": "\/Date(1757445667178)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "ytdlp-interface",
+            "Version": "2.15.0",
+            "Updated": "\/Date(1756958948077)\/"
         },
         {
             "Info": "",
@@ -540,19 +540,19 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1756931296000)\/",
+                "value": "\/Date(1757435434000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, September 3, 2025 4:28:16 PM"
+                "DateTime": "Tuesday, September 9, 2025 12:30:34 PM"
             },
-            "Manifests": 1403
+            "Manifests": 1404
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1756931336000)\/",
+                "value": "\/Date(1757435424000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, September 3, 2025 4:28:56 PM"
+                "DateTime": "Tuesday, September 9, 2025 12:30:24 PM"
             },
             "Manifests": 2180
         },
@@ -560,9 +560,9 @@
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
             "Updated": {
-                "value": "\/Date(1756931724000)\/",
+                "value": "\/Date(1757436308000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, September 3, 2025 4:35:24 PM"
+                "DateTime": "Tuesday, September 9, 2025 12:45:08 PM"
             },
             "Manifests": 510
         },
@@ -580,9 +580,9 @@
             "Name": "nonportable",
             "Source": "https://github.com/ScoopInstaller/Nonportable",
             "Updated": {
-                "value": "\/Date(1756904326000)\/",
+                "value": "\/Date(1757436213000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Wednesday, September 3, 2025 8:58:46 AM"
+                "DateTime": "Tuesday, September 9, 2025 12:43:33 PM"
             },
             "Manifests": 128
         },
@@ -590,9 +590,9 @@
             "Name": "java",
             "Source": "https://github.com/ScoopInstaller/Java",
             "Updated": {
-                "value": "\/Date(1756862583000)\/",
+                "value": "\/Date(1757435124000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Tuesday, September 2, 2025 9:23:03 PM"
+                "DateTime": "Tuesday, September 9, 2025 12:25:24 PM"
             },
             "Manifests": 299
         },
@@ -600,11 +600,21 @@
             "Name": "ropean",
             "Source": "https://github.com/ropean/scoop-ropean",
             "Updated": {
-                "value": "\/Date(1756861281000)\/",
+                "value": "\/Date(1757006011000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Tuesday, September 2, 2025 9:01:21 PM"
+                "DateTime": "Thursday, September 4, 2025 1:13:31 PM"
             },
-            "Manifests": 15
+            "Manifests": 17
+        },
+        {
+            "Name": "vsbuildtools",
+            "Source": "https://github.com/tree-s/vsbuildtools",
+            "Updated": {
+                "value": "\/Date(1757436090000)\/",
+                "DisplayHint": 2,
+                "DateTime": "Tuesday, September 9, 2025 12:41:30 PM"
+            },
+            "Manifests": 4
         }
     ]
 }
