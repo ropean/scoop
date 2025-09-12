@@ -4,7 +4,7 @@ This workflow is designed to automatically update Scoop bucket manifests when a 
 
 ## Overview
 
-The workflow downloads release assets from a source repository, calculates their SHA256 hash, and updates the Scoop bucket manifest files in the `ropean/scoop-ropean` repository.
+The workflow downloads release assets from a source repository, calculates their SHA256 hash, and updates the Scoop bucket manifest files in the `ropean/scoop` repository.
 
 ## Features
 
@@ -29,7 +29,7 @@ on:
 jobs:
   update-scoop:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    uses: ropean/scoop-ropean/.github/workflows/update-scoop-call.yml@main
+    uses: ropean/scoop/.github/workflows/update-scoop-call.yml@main
     with:
       tag: ${{ github.event.workflow_run.head_branch }}
       app_name: 'myhosts'
@@ -85,7 +85,7 @@ secrets:
 
 | Secret       | Description                                                              |
 | ------------ | ------------------------------------------------------------------------ |
-| `deploy_key` | Deploy key for pushing changes to https://github.com/ropean/scoop-ropean |
+| `deploy_key` | Deploy key for pushing changes to https://github.com/ropean/scoop |
 
 ### Optional Secrets
 
@@ -114,7 +114,7 @@ secrets:
 ### 4. Repository Setup
 
 - Sets up SSH deploy key for pushing to target repository
-- Checks out the `ropean/scoop-ropean` repository
+- Checks out the `ropean/scoop` repository
 
 ### 5. Manifest Management
 
@@ -125,7 +125,7 @@ secrets:
 ### 6. Commit and Push
 
 - Commits changes with detailed commit message
-- Pushes to the main branch of `ropean/scoop-ropean`
+- Pushes to the main branch of `ropean/scoop`
 
 ## File Structure
 
@@ -169,8 +169,8 @@ The generated manifest follows the Scoop bucket format:
 
 ### 1. Deploy Key Setup
 
-- Generate an SSH key pair for the `ropean/scoop-ropean` repository
-- Add the public key as a deploy key in `ropean/scoop-ropean` repository settings
+- Generate an SSH key pair for the `ropean/scoop` repository
+- Add the public key as a deploy key in `ropean/scoop` repository settings
 - Add the private key as `SCOOP_ROPEAN_DEPLOY_KEY` secret in your source repository
 
 ### 2. Private Repository Setup (Optional)
@@ -204,7 +204,7 @@ The workflow includes error handling for:
 
 ### Common Issues
 
-1. **Permission Denied**: Check that deploy key has write access to `ropean/scoop-ropean`
+1. **Permission Denied**: Check that deploy key has write access to `ropean/scoop`
 2. **Asset Not Found**: Verify the executable name matches the release asset
 3. **Private Repo Access**: Ensure `source_repo_token` has proper permissions
 4. **Version Conflicts**: Check that the tag format is correct (vX.Y.Z)

@@ -7,7 +7,7 @@
   "hash": "7910A6E02CE1FE5B519633EFB910F173CAC517D56665A75B50054E0D9656F554",
   "bin": "FileSplit.exe",
   "checkver": {
-    "github": "ropean/scoop-ropean"
+    "github": "ropean/scoop"
   },
   "autoupdate": {
     "url": "https://github.com/ropean/windows-tools/releases/download/v$version/FileSplit.exe"

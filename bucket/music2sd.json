@@ -7,7 +7,7 @@
   "hash": "B0907538AE381153E777AE565ED52B83CDBCF9B807C965961315B5FE6E96BA69",
   "bin": "Music2SD.exe",
   "checkver": {
-    "github": "ropean/scoop-ropean"
+    "github": "ropean/scoop"
   },
   "autoupdate": {
     "url": "https://github.com/ropean/windows-tools/releases/download/v$version/Music2SD.exe"

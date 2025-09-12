@@ -7,7 +7,7 @@
   "hash": "1BBCA3F0BB4D5DFDBD92A1E3D60CCE2A4CDA4B51F218072A594D71B6E76DC54A",
   "bin": "BestPwd.exe",
   "checkver": {
-    "github": "ropean/scoop-ropean"
+    "github": "ropean/scoop"
   },
   "autoupdate": {
     "url": "https://github.com/ropean/windows-tools/releases/download/v$version/BestPwd.exe"

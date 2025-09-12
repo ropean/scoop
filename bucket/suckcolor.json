@@ -7,7 +7,7 @@
   "hash": "3D7211EB80E0EB52C364FA76D50BA30D9A56675F9E5E6B22A0C614B13E68568E",
   "bin": "SuckColor.exe",
   "checkver": {
-    "github": "ropean/scoop-ropean"
+    "github": "ropean/scoop"
   },
   "autoupdate": {
     "url": "https://github.com/ropean/windows-tools/releases/download/v$version/SuckColor.exe"

@@ -7,7 +7,7 @@
   "hash": "887FC6F397775528F5569E79201E9B64F75DE1CBA63D0651520D2B2ED3030B77",
   "bin": "CssImageDownload.exe",
   "checkver": {
-    "github": "ropean/scoop-ropean"
+    "github": "ropean/scoop"
   },
   "autoupdate": {
     "url": "https://github.com/ropean/windows-tools/releases/download/v$version/CssImageDownload.exe"

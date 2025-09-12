@@ -598,7 +598,7 @@
         },
         {
             "Name": "ropean",
-            "Source": "https://github.com/ropean/scoop-ropean",
+            "Source": "https://github.com/ropean/scoop",
             "Updated": {
                 "value": "\/Date(1757006011000)\/",
                 "DisplayHint": 2,

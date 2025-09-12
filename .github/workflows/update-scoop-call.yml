@@ -58,7 +58,7 @@ on:
         default: ''
     secrets:
       deploy_key:
-        description: 'Deploy key for pushing changes to https://github.com/ropean/scoop-ropean'
+        description: 'Deploy key for pushing changes to https://github.com/ropean/scoop'
         required: true
       source_repo_token:
         description: 'GitHub App or CI token for accessing source repository (optional, required for private repos)'
@@ -136,7 +136,7 @@ jobs:
       - name: Checkout target repository
         uses: actions/checkout@v4
         with:
-          repository: ropean/scoop-ropean
+          repository: ropean/scoop
           ssh-key: ${{ secrets.deploy_key }}
 
       - name: Configure Git

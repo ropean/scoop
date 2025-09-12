@@ -7,7 +7,7 @@
   "hash": "50D59C88850CC3F843739B96A7001EBCC98ECDF47928AB37F53819CDCA2B91F8",
   "bin": "MyExplorer.exe",
   "checkver": {
-    "github": "ropean/scoop-ropean"
+    "github": "ropean/scoop"
   },
   "autoupdate": {
     "url": "https://github.com/ropean/windows-tools/releases/download/v$version/MyExplorer.exe"

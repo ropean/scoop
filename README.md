@@ -1,4 +1,4 @@
-# scoop-ropean
+# scoop
 
 A Scoop bucket for Ropean's small Windows utilities.
 
@@ -14,7 +14,7 @@ irm get.scoop.sh | iex
 ### Add this bucket
 
 ```powershell
-scoop bucket add ropean https://github.com/ropean/scoop-ropean
+scoop bucket add ropean https://github.com/ropean/scoop
 ```
 
 ### Install apps
@@ -61,7 +61,7 @@ This bucket uses an automated workflow system to keep packages up to date:
 
 If you want to add your package to this bucket, you can use the automated workflow:
 
-1. **Set up the workflow** in your repository to call `ropean/scoop-ropean/.github/workflows/update-scoop-call.yml`
+1. **Set up the workflow** in your repository to call `ropean/scoop/.github/workflows/update-scoop-call.yml`
 2. **Configure authentication** with the required deploy key
 3. **Publish releases** with semantic versioning (e.g., `v1.0.0`)
 
