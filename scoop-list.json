@@ -60,6 +60,13 @@
         },
         {
             "Info": "",
+            "Source": "main",
+            "Name": "bun",
+            "Version": "1.2.22",
+            "Updated": "\/Date(1757901004530)\/"
+        },
+        {
+            "Info": "",
             "Source": "ropean",
             "Name": "c-hash",
             "Version": "1.2.0",
@@ -83,8 +90,8 @@
             "Info": "",
             "Source": "main",
             "Name": "cargo-binstall",
-            "Version": "1.15.4",
-            "Updated": "\/Date(1757445398227)\/"
+            "Version": "1.15.5",
+            "Updated": "\/Date(1757901163653)\/"
         },
         {
             "Info": "",
@@ -209,8 +216,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "googlechrome",
-            "Version": "140.0.7339.81",
-            "Updated": "\/Date(1756939071433)\/"
+            "Version": "140.0.7339.128",
+            "Updated": "\/Date(1757517142916)\/"
         },
         {
             "Info": "",
@@ -243,9 +250,9 @@
         {
             "Info": "",
             "Source": "main",
-            "Name": "hugo",
+            "Name": "hugo-extended",
             "Version": "0.150.0",
-            "Updated": "\/Date(1757445619478)\/"
+            "Updated": "\/Date(1757517080478)\/"
         },
         {
             "Info": "",
@@ -265,8 +272,8 @@
             "Info": "",
             "Source": "main",
             "Name": "innounp",
-            "Version": "2.65.1",
-            "Updated": "\/Date(1756599803916)\/"
+            "Version": "2.65.2",
+            "Updated": "\/Date(1757901167916)\/"
         },
         {
             "Info": "",
@@ -295,6 +302,13 @@
             "Name": "myhosts",
             "Version": "0.1.1",
             "Updated": "\/Date(1756939072688)\/"
+        },
+        {
+            "Info": "",
+            "Source": "versions",
+            "Name": "nodejs22",
+            "Version": "22.19.0",
+            "Updated": "\/Date(1757900944337)\/"
         },
         {
             "Info": "",
@@ -333,10 +347,17 @@
         },
         {
             "Info": "",
+            "Source": "main",
+            "Name": "pnpm",
+            "Version": "10.16.1",
+            "Updated": "\/Date(1757900993978)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "postman",
-            "Version": "11.62.1",
-            "Updated": "\/Date(1757445635030)\/"
+            "Version": "11.62.7",
+            "Updated": "\/Date(1757901186159)\/"
         },
         {
             "Info": "",
@@ -452,10 +473,17 @@
         },
         {
             "Info": "",
+            "Source": "sysinternals",
+            "Name": "tcpview",
+            "Version": "4.19",
+            "Updated": "\/Date(1757534868638)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "unigetui",
-            "Version": "3.3.3",
-            "Updated": "\/Date(1757445653078)\/"
+            "Version": "3.3.5",
+            "Updated": "\/Date(1757901198905)\/"
         },
         {
             "Info": "",
@@ -487,13 +515,6 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "volta",
-            "Version": "2.0.2",
-            "Updated": "\/Date(1757445465638)\/"
-        },
-        {
-            "Info": "",
             "Source": "vsbuildtools",
             "Name": "vsbuildtools2019",
             "Version": "16.11.51",
@@ -503,15 +524,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.103.2",
-            "Updated": "\/Date(1756133806110)\/"
+            "Version": "1.104.0",
+            "Updated": "\/Date(1757901224926)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "warp-terminal",
-            "Version": "0.2025.09.03.08.11.stable_03",
-            "Updated": "\/Date(1757445664526)\/"
+            "Version": "0.2025.09.10.08.11.stable_01",
+            "Updated": "\/Date(1757901238734)\/"
         },
         {
             "Info": "",
@@ -540,29 +561,29 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1757435434000)\/",
+                "value": "\/Date(1757896792000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Tuesday, September 9, 2025 12:30:34 PM"
+                "DateTime": "Sunday, September 14, 2025 8:39:52 PM"
             },
-            "Manifests": 1404
+            "Manifests": 1402
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1757435424000)\/",
+                "value": "\/Date(1757896855000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Tuesday, September 9, 2025 12:30:24 PM"
+                "DateTime": "Sunday, September 14, 2025 8:40:55 PM"
             },
-            "Manifests": 2180
+            "Manifests": 2182
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
             "Updated": {
-                "value": "\/Date(1757436308000)\/",
+                "value": "\/Date(1757881958000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Tuesday, September 9, 2025 12:45:08 PM"
+                "DateTime": "Sunday, September 14, 2025 4:32:38 PM"
             },
             "Manifests": 510
         },
@@ -580,9 +601,9 @@
             "Name": "nonportable",
             "Source": "https://github.com/ScoopInstaller/Nonportable",
             "Updated": {
-                "value": "\/Date(1757436213000)\/",
+                "value": "\/Date(1757838995000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Tuesday, September 9, 2025 12:43:33 PM"
+                "DateTime": "Sunday, September 14, 2025 4:36:35 AM"
             },
             "Manifests": 128
         },
@@ -590,19 +611,19 @@
             "Name": "java",
             "Source": "https://github.com/ScoopInstaller/Java",
             "Updated": {
-                "value": "\/Date(1757435124000)\/",
+                "value": "\/Date(1757726371000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Tuesday, September 9, 2025 12:25:24 PM"
+                "DateTime": "Friday, September 12, 2025 9:19:31 PM"
             },
             "Manifests": 299
         },
         {
             "Name": "ropean",
-            "Source": "https://github.com/ropean/scoop",
+            "Source": "https://github.com/ropean/scoop-ropean",
             "Updated": {
-                "value": "\/Date(1757006011000)\/",
+                "value": "\/Date(1757642052000)\/",
                 "DisplayHint": 2,
-                "DateTime": "Thursday, September 4, 2025 1:13:31 PM"
+                "DateTime": "Thursday, September 11, 2025 9:54:12 PM"
             },
             "Manifests": 17
         },
