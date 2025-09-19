@@ -97,4 +97,4 @@ echo.
 echo Log saved to: !LOG_FILE!
 echo ==============================================
 
-pause
+@REM pause
