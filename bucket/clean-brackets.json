@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "description": "Remove (number) patterns from filenames",
+  "homepage": "https://github.com/ropean/scoop/",
+  "license": { "identifier": "EULA", "url": "https://github.com/ropean/scoop/blob/main/LICENSE" },
+  "url": "https://raw.githubusercontent.com/ropean/scoop/main/apps/clean-brackets.cmd",
+  "hash": "c3452f94196c9bc4ecfcfe17d94f9592c60d78f8df3ac98f76a72275af30db44",
+  "bin": [
+    ["clean-brackets.cmd", "clean-brackets"],
+    ["clean-brackets.cmd", "cb"]
+  ],
+  "checkver": {
+    "github": "ropean/scoop"
+  },
+  "autoupdate": {
+    "url": "https://raw.githubusercontent.com/ropean/scoop/main/apps/clean-brackets.cmd"
+  },
+  "notes": "Specifically designed for correcting renamed files"
+}
