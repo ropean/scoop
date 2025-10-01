@@ -1,4 +1,6 @@
 @echo off
+chcp 65001 >nul
+
 REM -----------------------------------------------------------------------------
 REM Backup Scoop configuration, installed apps, and buckets to scoop-meta.json
 REM The exported file will include config, apps, and buckets sections.
@@ -15,7 +17,7 @@ set "exportFile=%backupDir%\scoop-meta.json"
 
 REM Export Scoop configuration, installed apps, and buckets to the JSON file
 REM The '-c' flag ensures credentials are included in the export
-scoop export -c > "%exportFile%"
+call scoop export -c > "%exportFile%"
 
 REM Check if the command was successful
 if %errorlevel% equ 0 (
