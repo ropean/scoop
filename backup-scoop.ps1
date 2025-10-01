@@ -11,7 +11,8 @@ $exportFile = Join-Path $backupDir "scoop-meta.json"
 
 # Export Scoop configuration, installed apps, and buckets to the JSON file
 # The '-c' flag ensures credentials are included in the export
-scoop export -c > $exportFile
+# scoop export -c > $exportFile
+scoop export -c | jq -S . > $exportFile
 
 # Output the path of the backup file and a success message
 Write-Host "✓ Scoop export completed successfully." -ForegroundColor Green

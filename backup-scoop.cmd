@@ -17,7 +17,8 @@ set "exportFile=%backupDir%\scoop-meta.json"
 
 REM Export Scoop configuration, installed apps, and buckets to the JSON file
 REM The '-c' flag ensures credentials are included in the export
-call scoop export -c > "%exportFile%"
+@REM call scoop export -c > "%exportFile%"
+call scoop export -c | jq -S . > "%exportFile%"
 
 REM Check if the command was successful
 if %errorlevel% equ 0 (
