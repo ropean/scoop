@@ -1,0 +1,672 @@
+{
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main.git",
+            "Updated": "2025-10-01T12:31:13-04:00",
+            "Manifests": 1402
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2025-10-01T12:31:01-04:00",
+            "Manifests": 2191
+        },
+        {
+            "Name": "versions",
+            "Source": "https://github.com/ScoopInstaller/Versions",
+            "Updated": "2025-10-01T12:43:07-04:00",
+            "Manifests": 516
+        },
+        {
+            "Name": "sysinternals",
+            "Source": "https://github.com/niheaven/scoop-sysinternals",
+            "Updated": "2025-09-16T16:34:13-04:00",
+            "Manifests": 75
+        },
+        {
+            "Name": "nonportable",
+            "Source": "https://github.com/ScoopInstaller/Nonportable",
+            "Updated": "2025-10-01T12:42:22-04:00",
+            "Manifests": 128
+        },
+        {
+            "Name": "java",
+            "Source": "https://github.com/ScoopInstaller/Java",
+            "Updated": "2025-09-29T00:24:21-04:00",
+            "Manifests": 322
+        },
+        {
+            "Name": "ropean",
+            "Source": "https://github.com/ropean/scoop-ropean",
+            "Updated": "2025-09-19T14:08:04-04:00",
+            "Manifests": 18
+        },
+        {
+            "Name": "vsbuildtools",
+            "Source": "https://github.com/tree-s/vsbuildtools",
+            "Updated": "2025-09-23T16:34:26-04:00",
+            "Manifests": 4
+        }
+    ],
+    "config": {
+        "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
+        "scoop_branch": "master",
+        "aria2-warning-enabled": false,
+        "aria2-enabled": true,
+        "aria2-split": "8",
+        "aria2-max-connection-per-server": "8",
+        "aria2-min-split-size": "500M"
+    },
+    "apps": [
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-08-25T10:13:28.7047416-04:00",
+            "Name": "7zip",
+            "Version": "25.01"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-05T00:11:02.9247565-04:00",
+            "Name": "amass",
+            "Version": "4.2.0"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-08-26T10:05:57.546212-04:00",
+            "Name": "android-clt",
+            "Version": "13114758"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-03T18:37:14.3472083-04:00",
+            "Name": "android-studio",
+            "Version": "2025.1.3.7"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-03T11:55:29.8181873-04:00",
+            "Name": "aria2",
+            "Version": "1.37.0-1"
+        },
+        {
+            "Info": "",
+            "Source": "sysinternals",
+            "Updated": "2025-09-21T21:18:03.0988453-04:00",
+            "Name": "autoruns",
+            "Version": "14.11"
+        },
+        {
+            "Info": "",
+            "Source": "ropean",
+            "Updated": "2025-08-30T20:23:18.9415634-04:00",
+            "Name": "bestpwd",
+            "Version": "1.0.1"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-30T09:44:04.3002386-04:00",
+            "Name": "bun",
+            "Version": "1.2.23"
+        },
+        {
+            "Info": "",
+            "Source": "ropean",
+            "Updated": "2025-09-04T13:14:04.5045708-04:00",
+            "Name": "c-hash",
+            "Version": "1.2.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:44:24.152938-04:00",
+            "Name": "caffeine",
+            "Version": "1.98"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-03T11:56:00.4499195-04:00",
+            "Name": "captura",
+            "Version": "8.0.0"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-27T12:10:23.4749218-04:00",
+            "Name": "cargo-binstall",
+            "Version": "1.15.6"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-03T11:55:15.4642726-04:00",
+            "Name": "ccleaner",
+            "Version": "6.39.11548"
+        },
+        {
+            "Info": "",
+            "Source": "ropean",
+            "Updated": "2025-09-19T14:09:06.6888069-04:00",
+            "Name": "clean-brackets",
+            "Version": "1.2.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-21T21:12:24.5911766-04:00",
+            "Name": "context-menu-manager",
+            "Version": "3.3.3.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:43:15.2974096-04:00",
+            "Name": "cpu-z",
+            "Version": "2.16"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:59:55.4244899-04:00",
+            "Name": "crystaldiskmark",
+            "Version": "9.0.1"
+        },
+        {
+            "Info": "",
+            "Source": "ropean",
+            "Updated": "2025-09-04T13:22:40.226-04:00",
+            "Name": "csharp-hash",
+            "Version": "0.3.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-30T09:47:22.5782547-04:00",
+            "Name": "cursor",
+            "Version": "1.7.17"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-17T10:19:47.6716273-04:00",
+            "Name": "dark",
+            "Version": "3.14.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:01:03.6798678-04:00",
+            "Name": "everything",
+            "Version": "1.4.1.1028"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-31T16:03:06.3072585-04:00",
+            "Name": "fastcopy",
+            "Version": "5.10.0"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-04T00:27:15.110205-04:00",
+            "Name": "ffmpeg",
+            "Version": "8.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-31T18:57:07.6793158-04:00",
+            "Name": "fiddler",
+            "Version": "5.0.20253.3311"
+        },
+        {
+            "Info": "",
+            "Source": "ropean",
+            "Updated": "2025-08-30T20:23:19.8206725-04:00",
+            "Name": "filesplit",
+            "Version": "1.0.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-17T10:19:51.1546045-04:00",
+            "Name": "filezilla",
+            "Version": "3.69.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-30T09:50:54.3321389-04:00",
+            "Name": "flutter",
+            "Version": "3.35.5"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:07:51.507993-04:00",
+            "Name": "fsviewer",
+            "Version": "8.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T09:26:40.8019206-04:00",
+            "Name": "geekuninstaller",
+            "Version": "1.5.2.165"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-30T09:46:56.1530865-04:00",
+            "Name": "git",
+            "Version": "2.51.0.2"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-25T10:13:58.2206752-04:00",
+            "Name": "github",
+            "Version": "3.5.2"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-27T12:11:25.356482-04:00",
+            "Name": "googlechrome",
+            "Version": "140.0.7339.208"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T14:17:52.6172406-04:00",
+            "Name": "gpu-z",
+            "Version": "2.68.0"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-08-28T22:12:35.3732157-04:00",
+            "Name": "hashcat",
+            "Version": "7.1.2"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:01:57.609204-04:00",
+            "Name": "honeyview",
+            "Version": "5.53"
+        },
+        {
+            "Info": "",
+            "Source": "ropean",
+            "Updated": "2025-09-02T17:23:52.1886108-04:00",
+            "Name": "HttpStatus",
+            "Version": "0.1.4"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-27T12:11:27.5884081-04:00",
+            "Name": "hugo-extended",
+            "Version": "0.150.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-30T00:59:44.8939812-04:00",
+            "Name": "HWMonitor",
+            "Version": "1.59"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T09:58:19.2941567-04:00",
+            "Name": "hxd",
+            "Version": "2.5.0.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T09:54:13.647481-04:00",
+            "Name": "ilspy",
+            "Version": "9.1.0.7988"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-14T21:52:47.9167657-04:00",
+            "Name": "innounp",
+            "Version": "2.65.2"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-23T21:08:17.8991685-04:00",
+            "Name": "MarkText",
+            "Version": "0.17.1"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-08-28T23:41:22.6970977-04:00",
+            "Name": "mingw-winlibs",
+            "Version": "15.2.0-13.0.0-r1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-27T17:17:16.881981-04:00",
+            "Name": "mp3tag",
+            "Version": "3.31a"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T09:58:56.5669824-04:00",
+            "Name": "msedgeredirect",
+            "Version": "0.8.0.0"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-03T11:46:10.5225478-04:00",
+            "Name": "msys2",
+            "Version": "2025-08-30"
+        },
+        {
+            "Info": "",
+            "Source": "ropean",
+            "Updated": "2025-09-03T18:37:52.6884764-04:00",
+            "Name": "myhosts",
+            "Version": "0.1.1"
+        },
+        {
+            "Info": "",
+            "Source": "versions",
+            "Updated": "2025-09-27T12:11:35.480095-04:00",
+            "Name": "nodejs22",
+            "Version": "22.20.0"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-17T10:20:37.1241584-04:00",
+            "Name": "nuget",
+            "Version": "6.14.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T11:05:50.7493552-04:00",
+            "Name": "openshot",
+            "Version": "3.3.0"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-30T09:47:52.5634088-04:00",
+            "Name": "pandoc",
+            "Version": "3.8.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T14:23:19.7123988-04:00",
+            "Name": "pci-z",
+            "Version": "2.0-2017.07.01"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-27T12:11:50.5851588-04:00",
+            "Name": "pdf-xchange-editor",
+            "Version": "10.7.3.401"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-27T12:11:58.9394048-04:00",
+            "Name": "php",
+            "Version": "8.4.13"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-27T17:18:53.4919196-04:00",
+            "Name": "picard",
+            "Version": "2.13.3"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-27T12:12:05.5792496-04:00",
+            "Name": "pnpm",
+            "Version": "10.17.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-27T12:12:20.9863526-04:00",
+            "Name": "postman",
+            "Version": "11.64.7"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-09T15:20:42.1998659-04:00",
+            "Name": "potplayer",
+            "Version": "250909"
+        },
+        {
+            "Info": "",
+            "Source": "sysinternals",
+            "Updated": "2025-08-26T11:46:29.9891079-04:00",
+            "Name": "process-explorer",
+            "Version": "17.06"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-07T23:09:33.0311878-04:00",
+            "Name": "putty",
+            "Version": "0.83"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-08-25T10:54:36.3990604-04:00",
+            "Name": "python",
+            "Version": "3.13.7"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:11:19.2844857-04:00",
+            "Name": "qbittorrent",
+            "Version": "5.1.2"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-09T15:32:23.5204922-04:00",
+            "Name": "rapidee",
+            "Version": "9.2.937"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T12:20:02.0860763-04:00",
+            "Name": "revouninstaller",
+            "Version": "2.6.0"
+        },
+        {
+            "Info": "",
+            "Source": "ropean",
+            "Updated": "2025-09-04T13:14:26.9123704-04:00",
+            "Name": "rust-hash",
+            "Version": "0.2.4"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-21T21:08:00.6129009-04:00",
+            "Name": "rust-msvc",
+            "Version": "1.90.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-21T21:08:03.3424616-04:00",
+            "Name": "rustdesk",
+            "Version": "1.4.2"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-08-26T14:15:36.4047671-04:00",
+            "Name": "scoop-search",
+            "Version": "2.1.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T09:59:55.7620061-04:00",
+            "Name": "sharex",
+            "Version": "18.0.1"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-03T18:38:44.3197937-04:00",
+            "Name": "spacesniffer",
+            "Version": "2.0.3.12"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:42:28.2772905-04:00",
+            "Name": "ssd-z",
+            "Version": "16.09.09"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-08-25T10:34:49.7327629-04:00",
+            "Name": "sudo",
+            "Version": "0.2020.01.26"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T09:25:21.6458744-04:00",
+            "Name": "systeminformer",
+            "Version": "3.2.25011.2103"
+        },
+        {
+            "Info": "",
+            "Source": "sysinternals",
+            "Updated": "2025-09-10T16:07:48.6382116-04:00",
+            "Name": "tcpview",
+            "Version": "4.19"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-14T21:53:18.9051471-04:00",
+            "Name": "unigetui",
+            "Version": "3.3.5"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-08-28T23:34:11.0960945-04:00",
+            "Name": "upx",
+            "Version": "5.0.2"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-30T09:53:03.5626912-04:00",
+            "Name": "vcredist-aio",
+            "Version": "0.101.0"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T10:41:16.0089818-04:00",
+            "Name": "ventoy",
+            "Version": "1.1.07"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-08-26T11:04:23.8836783-04:00",
+            "Name": "vlc",
+            "Version": "3.0.21"
+        },
+        {
+            "Info": "",
+            "Source": "vsbuildtools",
+            "Updated": "2025-09-09T16:29:28.4656588-04:00",
+            "Name": "vsbuildtools2019",
+            "Version": "16.11.51"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-27T12:12:47.7112121-04:00",
+            "Name": "vscode",
+            "Version": "1.104.2"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-30T09:51:33.4707231-04:00",
+            "Name": "warp-terminal",
+            "Version": "0.2025.09.24.08.11.stable_03"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-30T09:51:48.1247624-04:00",
+            "Name": "xnviewmp",
+            "Version": "1.9.4"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-09-27T12:13:00.3766987-04:00",
+            "Name": "yt-dlp",
+            "Version": "2025.09.26"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-09-04T00:09:08.0771477-04:00",
+            "Name": "ytdlp-interface",
+            "Version": "2.15.0"
+        },
+        {
+            "Info": "",
+            "Source": "sysinternals",
+            "Updated": "2025-09-21T21:08:40.957676-04:00",
+            "Name": "zoomit",
+            "Version": "9.01"
+        },
+        {
+            "Info": "Global install",
+            "Source": "extras",
+            "Updated": "2025-09-30T00:55:59.3425336-04:00",
+            "Name": "fscapture",
+            "Version": "11.0"
+        }
+    ]
+}
