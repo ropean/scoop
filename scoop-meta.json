@@ -142,6 +142,13 @@
     },
     {
       "Info": "",
+      "Name": "diskgenius",
+      "Source": "extras",
+      "Updated": "2025-10-02T01:06:28.5760848-04:00",
+      "Version": "6.0.1.1645"
+    },
+    {
+      "Info": "",
       "Name": "everything",
       "Source": "extras",
       "Updated": "2025-08-26T10:01:03.6798678-04:00",
@@ -443,6 +450,13 @@
     },
     {
       "Info": "",
+      "Name": "q-dir",
+      "Source": "extras",
+      "Updated": "2025-10-01T22:46:52.7224309-04:00",
+      "Version": "12.35"
+    },
+    {
+      "Info": "",
       "Name": "qbittorrent",
       "Source": "extras",
       "Updated": "2025-08-26T10:11:19.2844857-04:00",
@@ -629,19 +643,19 @@
       "Manifests": 1402,
       "Name": "main",
       "Source": "https://github.com/ScoopInstaller/Main.git",
-      "Updated": "2025-10-01T16:29:41-04:00"
+      "Updated": "2025-10-01T20:37:18-04:00"
     },
     {
       "Manifests": 2191,
       "Name": "extras",
       "Source": "https://github.com/ScoopInstaller/Extras",
-      "Updated": "2025-10-01T16:29:22-04:00"
+      "Updated": "2025-10-01T20:37:41-04:00"
     },
     {
       "Manifests": 516,
       "Name": "versions",
       "Source": "https://github.com/ScoopInstaller/Versions",
-      "Updated": "2025-10-01T12:43:07-04:00"
+      "Updated": "2025-10-01T22:02:30-04:00"
     },
     {
       "Manifests": 75,
@@ -653,7 +667,7 @@
       "Manifests": 128,
       "Name": "nonportable",
       "Source": "https://github.com/ScoopInstaller/Nonportable",
-      "Updated": "2025-10-01T12:42:22-04:00"
+      "Updated": "2025-10-01T22:00:55-04:00"
     },
     {
       "Manifests": 322,
@@ -665,7 +679,7 @@
       "Manifests": 18,
       "Name": "ropean",
       "Source": "https://github.com/ropean/scoop-ropean",
-      "Updated": "2025-09-19T14:08:04-04:00"
+      "Updated": "2025-10-01T22:58:31-04:00"
     },
     {
       "Manifests": 4,
