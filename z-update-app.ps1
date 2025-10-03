@@ -16,10 +16,10 @@
     The new hash value to set
 
 .EXAMPLE
-    ./update-app.ps1 -app "flyenv" -version "1.2.3" -hash "a1b2c3d4e5f6..."
+    ./z-update-app -app "flyenv" -version "1.2.3" -hash "a1b2c3d4e5f6..."
 
 .EXAMPLE
-    ./update-app.ps1 "flyenv" "1.2.3" "abc123def456..."
+    ./z-update-app "flyenv" "1.2.3" "abc123def456..."
 #>
 
 param(
