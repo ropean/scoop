@@ -8,7 +8,13 @@
   },
   "url": "https://github.com/xpf0000/FlyEnv/releases/download/v4.10.8/FlyEnv-Setup-4.10.8.exe",
   "hash": "5d016e30e9e16a0e6b0dbc90c329c24f22804b3831db93cfa6725b0a2a9062c0",
-  "bin": "FlyEnv-Setup-4.10.8.exe",
+  "installer": {
+    "script": [
+      "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+      "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ]
+  },
+  "bin": "PhpWebStudy.exe",
   "checkver": {
     "github": "xpf0000/FlyEnv"
   },
