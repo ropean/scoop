@@ -86,7 +86,13 @@ if ($help) {
     exit 0
 }
 
-# Initialize variables
+# Set the default working directory to the script's location
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+if (-not $path -or $path -eq ".") {
+    $path = $ScriptDir
+}
+
+# Resolve the provided or default path
 try {
     $CURRENT_DIR = Resolve-Path $path -ErrorAction Stop
 } catch {
