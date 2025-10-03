@@ -7,8 +7,8 @@
     "url": "https://github.com/xpf0000/FlyEnv?tab=BSD-3-Clause-1-ov-file"
   },
   "url": "https://github.com/xpf0000/FlyEnv/releases/download/v4.10.8/FlyEnv-Setup-4.10.8.exe",
-  "hash": "2fd714d2077850181a28c23c632e3d99ac63937e08ec2544e9d8f45c36db4ef1",
-  "bin": "PhpWebStudy.exe",
+  "hash": "5d016e30e9e16a0e6b0dbc90c329c24f22804b3831db93cfa6725b0a2a9062c0",
+  "bin": "FlyEnv-Setup-4.10.8.exe",
   "checkver": {
     "github": "xpf0000/FlyEnv"
   },
