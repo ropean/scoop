@@ -95,8 +95,8 @@
       "Info": "",
       "Name": "clean-brackets",
       "Source": "ropean",
-      "Updated": "2025-09-19T14:09:06.6888069-04:00",
-      "Version": "1.2.0"
+      "Updated": "2025-10-03T09:49:30.6605968-04:00",
+      "Version": "1.2.8"
     },
     {
       "Info": "",
@@ -200,7 +200,7 @@
       "Info": "",
       "Name": "flyenv",
       "Source": "ropean",
-      "Updated": "2025-10-03T00:03:13.4643248-04:00",
+      "Updated": "2025-10-03T10:15:13.4434656-04:00",
       "Version": "4.10.8"
     },
     {
@@ -450,10 +450,10 @@
     },
     {
       "Info": "",
-      "Name": "python",
-      "Source": "main",
-      "Updated": "2025-08-25T10:54:36.3990604-04:00",
-      "Version": "3.13.7"
+      "Name": "python311",
+      "Source": "versions",
+      "Updated": "2025-10-03T14:01:34.4128932-04:00",
+      "Version": "3.11.9"
     },
     {
       "Info": "",
@@ -599,8 +599,8 @@
       "Info": "",
       "Name": "vscode",
       "Source": "extras",
-      "Updated": "2025-09-27T12:12:47.7112121-04:00",
-      "Version": "1.104.2"
+      "Updated": "2025-10-03T09:50:07.4049823-04:00",
+      "Version": "1.104.3"
     },
     {
       "Info": "",
@@ -650,19 +650,19 @@
       "Manifests": 1403,
       "Name": "main",
       "Source": "https://github.com/ScoopInstaller/Main.git",
-      "Updated": "2025-10-02T22:55:11-04:00"
+      "Updated": "2025-10-03T12:30:30-04:00"
     },
     {
       "Manifests": 2191,
       "Name": "extras",
       "Source": "https://github.com/ScoopInstaller/Extras",
-      "Updated": "2025-10-02T20:37:16-04:00"
+      "Updated": "2025-10-03T12:29:50-04:00"
     },
     {
       "Manifests": 516,
       "Name": "versions",
       "Source": "https://github.com/ScoopInstaller/Versions",
-      "Updated": "2025-10-02T22:06:44-04:00"
+      "Updated": "2025-10-03T12:41:46-04:00"
     },
     {
       "Manifests": 75,
@@ -674,7 +674,7 @@
       "Manifests": 128,
       "Name": "nonportable",
       "Source": "https://github.com/ScoopInstaller/Nonportable",
-      "Updated": "2025-10-02T08:58:31-04:00"
+      "Updated": "2025-10-03T08:57:38-04:00"
     },
     {
       "Manifests": 322,
@@ -683,10 +683,10 @@
       "Updated": "2025-10-02T04:25:20-04:00"
     },
     {
-      "Manifests": 19,
+      "Manifests": 20,
       "Name": "ropean",
       "Source": "https://github.com/ropean/scoop-ropean",
-      "Updated": "2025-10-03T00:22:29-04:00"
+      "Updated": "2025-10-03T10:14:12-04:00"
     },
     {
       "Manifests": 4,
