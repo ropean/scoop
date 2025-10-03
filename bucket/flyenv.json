@@ -6,7 +6,7 @@
     "identifier": "BSD 3-Clause License",
     "url": "https://github.com/xpf0000/FlyEnv?tab=BSD-3-Clause-1-ov-file"
   },
-  "url": "https://github.com/xpf0000/FlyEnv/releases/download/v4.10.10/FlyEnv-Setup-4.10.10.exe",
+  "url": "https://github.com/xpf0000/FlyEnv/releases/download/v4.10.8/FlyEnv-Setup-4.10.8.exe",
   "hash": "5d016e30e9e16a0e6b0dbc90c329c24f22804b3831db93cfa6725b0a2a9062c0",
   "installer": {
     "script": [
