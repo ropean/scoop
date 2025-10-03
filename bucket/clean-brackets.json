@@ -6,7 +6,7 @@
     "identifier": "EULA",
     "url": "https://github.com/ropean/scoop/blob/main/LICENSE"
   },
-  "url": "https://github.com/ropean/scoop/releases/download/v2.0.0/clean-brackets.ps1",
+  "url": "https://github.com/ropean/scoop/releases/download/v1.2.8/clean-brackets.ps1",
   "hash": "sha256:db344560dcaeda11013dba05941f5c95c5aeea255a0e992735e13667fa114138",
   "bin": [
     [
