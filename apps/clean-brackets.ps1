@@ -189,22 +189,22 @@ foreach ($file in $files) {
     }
 }
 
-# Write summary
-$summary = @"
+# # Write summary
+# $summary = @"
 
-=============================================
-SUMMARY
-Total files processed: $PROCESSED
-Files renamed: $RENAMED
-Errors/Skipped: $ERRORS
-=============================================
-"@
+# =============================================
+# SUMMARY
+# Total files processed: $PROCESSED
+# Files renamed: $RENAMED
+# Errors/Skipped: $ERRORS
+# =============================================
+# "@
 
-Write-Log $summary "Cyan"
+# Write-Log $summary "Cyan"
 
-if ($log) {
-    $summary | Out-File -FilePath $LOG_FILE -Append -Encoding UTF8
-}
+# if ($log) {
+#     $summary | Out-File -FilePath $LOG_FILE -Append -Encoding UTF8
+# }
 
 # Display final summary
 Write-Log "" "White"
