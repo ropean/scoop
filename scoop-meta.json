@@ -130,8 +130,8 @@
       "Info": "",
       "Name": "cursor",
       "Source": "extras",
-      "Updated": "2025-09-30T09:47:22.5782547-04:00",
-      "Version": "1.7.17"
+      "Updated": "2025-10-02T11:17:54.0067771-04:00",
+      "Version": "1.7.28"
     },
     {
       "Info": "",
@@ -198,6 +198,13 @@
     },
     {
       "Info": "",
+      "Name": "flyenv",
+      "Source": "ropean",
+      "Updated": "2025-10-03T00:03:13.4643248-04:00",
+      "Version": "4.10.8"
+    },
+    {
+      "Info": "",
       "Name": "fsviewer",
       "Source": "extras",
       "Updated": "2025-08-26T10:07:51.507993-04:00",
@@ -228,8 +235,8 @@
       "Info": "",
       "Name": "googlechrome",
       "Source": "extras",
-      "Updated": "2025-09-27T12:11:25.356482-04:00",
-      "Version": "140.0.7339.208"
+      "Updated": "2025-10-02T11:17:57.0163458-04:00",
+      "Version": "141.0.7390.55"
     },
     {
       "Info": "",
@@ -263,8 +270,8 @@
       "Info": "",
       "Name": "hugo-extended",
       "Source": "main",
-      "Updated": "2025-09-27T12:11:27.5884081-04:00",
-      "Version": "0.150.1"
+      "Updated": "2025-10-03T00:27:08.8624907-04:00",
+      "Version": "0.151.0"
     },
     {
       "Info": "",
@@ -410,8 +417,8 @@
       "Info": "",
       "Name": "pnpm",
       "Source": "main",
-      "Updated": "2025-09-27T12:12:05.5792496-04:00",
-      "Version": "10.17.1"
+      "Updated": "2025-10-03T00:27:14.9623256-04:00",
+      "Version": "10.18.0"
     },
     {
       "Info": "",
@@ -599,8 +606,8 @@
       "Info": "",
       "Name": "warp-terminal",
       "Source": "extras",
-      "Updated": "2025-09-30T09:51:33.4707231-04:00",
-      "Version": "0.2025.09.24.08.11.stable_03"
+      "Updated": "2025-10-03T00:27:27.7471947-04:00",
+      "Version": "0.2025.10.01.08.12.stable_02"
     },
     {
       "Info": "",
@@ -640,22 +647,22 @@
   ],
   "buckets": [
     {
-      "Manifests": 1402,
+      "Manifests": 1403,
       "Name": "main",
       "Source": "https://github.com/ScoopInstaller/Main.git",
-      "Updated": "2025-10-01T20:37:18-04:00"
+      "Updated": "2025-10-02T22:55:11-04:00"
     },
     {
       "Manifests": 2191,
       "Name": "extras",
       "Source": "https://github.com/ScoopInstaller/Extras",
-      "Updated": "2025-10-01T20:37:41-04:00"
+      "Updated": "2025-10-02T20:37:16-04:00"
     },
     {
       "Manifests": 516,
       "Name": "versions",
       "Source": "https://github.com/ScoopInstaller/Versions",
-      "Updated": "2025-10-01T22:02:30-04:00"
+      "Updated": "2025-10-02T22:06:44-04:00"
     },
     {
       "Manifests": 75,
@@ -667,19 +674,19 @@
       "Manifests": 128,
       "Name": "nonportable",
       "Source": "https://github.com/ScoopInstaller/Nonportable",
-      "Updated": "2025-10-01T22:00:55-04:00"
+      "Updated": "2025-10-02T08:58:31-04:00"
     },
     {
       "Manifests": 322,
       "Name": "java",
       "Source": "https://github.com/ScoopInstaller/Java",
-      "Updated": "2025-09-29T00:24:21-04:00"
+      "Updated": "2025-10-02T04:25:20-04:00"
     },
     {
-      "Manifests": 18,
+      "Manifests": 19,
       "Name": "ropean",
       "Source": "https://github.com/ropean/scoop-ropean",
-      "Updated": "2025-10-01T22:58:31-04:00"
+      "Updated": "2025-10-03T00:22:29-04:00"
     },
     {
       "Manifests": 4,
