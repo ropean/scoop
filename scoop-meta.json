@@ -93,6 +93,13 @@
     },
     {
       "Info": "",
+      "Name": "chezmoi",
+      "Source": "main",
+      "Updated": "2025-10-04T10:19:11.1910067-04:00",
+      "Version": "2.65.2"
+    },
+    {
+      "Info": "",
       "Name": "clean-brackets",
       "Source": "ropean",
       "Updated": "2025-10-03T09:49:30.6605968-04:00",
@@ -130,8 +137,8 @@
       "Info": "",
       "Name": "cursor",
       "Source": "extras",
-      "Updated": "2025-10-02T11:17:54.0067771-04:00",
-      "Version": "1.7.28"
+      "Updated": "2025-10-03T19:33:10.400835-04:00",
+      "Version": "1.7.33"
     },
     {
       "Info": "",
@@ -200,7 +207,7 @@
       "Info": "",
       "Name": "flyenv",
       "Source": "ropean",
-      "Updated": "2025-10-03T10:15:13.4434656-04:00",
+      "Updated": "2025-10-03T19:53:59.2056094-04:00",
       "Version": "4.10.8"
     },
     {
@@ -424,8 +431,8 @@
       "Info": "",
       "Name": "postman",
       "Source": "extras",
-      "Updated": "2025-09-27T12:12:20.9863526-04:00",
-      "Version": "11.64.7"
+      "Updated": "2025-10-03T19:33:14.8322111-04:00",
+      "Version": "11.65.4"
     },
     {
       "Info": "",
@@ -647,22 +654,22 @@
   ],
   "buckets": [
     {
-      "Manifests": 1403,
+      "Manifests": 1404,
       "Name": "main",
       "Source": "https://github.com/ScoopInstaller/Main.git",
-      "Updated": "2025-10-03T12:30:30-04:00"
+      "Updated": "2025-10-04T04:29:35-04:00"
     },
     {
       "Manifests": 2191,
       "Name": "extras",
       "Source": "https://github.com/ScoopInstaller/Extras",
-      "Updated": "2025-10-03T12:29:50-04:00"
+      "Updated": "2025-10-04T08:31:45-04:00"
     },
     {
       "Manifests": 516,
       "Name": "versions",
       "Source": "https://github.com/ScoopInstaller/Versions",
-      "Updated": "2025-10-03T12:41:46-04:00"
+      "Updated": "2025-10-04T08:54:50-04:00"
     },
     {
       "Manifests": 75,
@@ -674,19 +681,19 @@
       "Manifests": 128,
       "Name": "nonportable",
       "Source": "https://github.com/ScoopInstaller/Nonportable",
-      "Updated": "2025-10-03T08:57:38-04:00"
+      "Updated": "2025-10-03T16:34:25-04:00"
     },
     {
       "Manifests": 322,
       "Name": "java",
       "Source": "https://github.com/ScoopInstaller/Java",
-      "Updated": "2025-10-02T04:25:20-04:00"
+      "Updated": "2025-10-03T16:20:20-04:00"
     },
     {
       "Manifests": 20,
       "Name": "ropean",
       "Source": "https://github.com/ropean/scoop-ropean",
-      "Updated": "2025-10-03T10:14:12-04:00"
+      "Updated": "2025-10-03T19:52:42-04:00"
     },
     {
       "Manifests": 4,

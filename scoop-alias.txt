@@ -1,0 +1,1 @@
+scoop shim add cm chezmoi
