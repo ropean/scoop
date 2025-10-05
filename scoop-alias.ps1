@@ -1,0 +1,1 @@
+scoop install chezmoi & scoop shim add cm chezmoi
