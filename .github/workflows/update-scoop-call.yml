@@ -46,8 +46,18 @@ on:
         required: false
         type: string
         default: ''
+      shortcut_args:
+        description: 'Startup arguments for the shortcut (optional)'
+        required: false
+        type: string
+        default: ''
+      shortcut_icon:
+        description: 'Icon file path for the shortcut (optional)'
+        required: false
+        type: string
+        default: ''
       shortcut_description:
-        description: 'Shortcut description'
+        description: 'Shortcut description/tooltip'
         required: false
         type: string
         default: ''
@@ -200,9 +210,21 @@ jobs:
           }
           EOF
 
-          # Add shortcuts if provided
-          if [ -n "${{ inputs.shortcut_name }}" ] && [ -n "${{ inputs.shortcut_description }}" ]; then
-            jq --arg exe "${{ inputs.exe_name }}" --arg name "${{ steps.defaults.outputs.SHORTCUT_NAME }}" --arg desc "${{ inputs.shortcut_description }}" '. + {"shortcuts": [[$exe, $name, $desc]]}' manifest.json > temp.json
+          # Add shortcuts if shortcut_name is provided
+          # Scoop shortcuts format: [exe, name, args, icon, description]
+          # Position 0: executable name (required)
+          # Position 1: shortcut display name (required)
+          # Position 2: startup arguments (optional)
+          # Position 3: icon file path (optional)
+          # Position 4: description/tooltip (optional)
+          if [ -n "${{ inputs.shortcut_name }}" ]; then
+            jq --arg exe "${{ inputs.exe_name }}" \
+               --arg name "${{ steps.defaults.outputs.SHORTCUT_NAME }}" \
+               --arg args "${{ inputs.shortcut_args }}" \
+               --arg icon "${{ inputs.shortcut_icon }}" \
+               --arg desc "${{ inputs.shortcut_description }}" \
+               '. + {"shortcuts": [[$exe, $name, $args, $icon, $desc]]}' \
+               manifest.json > temp.json
             mv temp.json manifest.json
           fi
 
