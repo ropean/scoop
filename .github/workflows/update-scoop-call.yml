@@ -254,21 +254,30 @@ jobs:
           fi
 
           # Add aliases if provided
+          # Scoop bin format for aliases: [["exe", "alias1"], ["exe", "alias2"]]
           if [ -n "${{ inputs.aliases }}" ]; then
-            # Convert comma-separated string to JSON array
-            # Remove spaces and split by comma
+            # Convert comma-separated string to array of alias pairs
             ALIASES_INPUT="${{ inputs.aliases }}"
-            ALIASES_JSON=$(echo "$ALIASES_INPUT" | sed 's/[[:space:]]//g' | jq -R 'split(",") | map(select(length > 0))')
+            # First create the app_name alias, then custom aliases
+            BIN_ARRAY="[[\"${{ inputs.exe_name }}\", \"${{ inputs.app_name }}\"]]"
             
-            # Add app_name as default alias, then add custom aliases
-            jq --arg app_name "${{ inputs.app_name }}" \
-               --argjson aliases "$ALIASES_JSON" \
-               '. + {"bin": [.bin, $app_name] + $aliases}' manifest.json > temp.json
+            # Add custom aliases
+            for alias in $(echo "$ALIASES_INPUT" | sed 's/[[:space:]]//g' | tr ',' '\n'); do
+              if [ -n "$alias" ]; then
+                BIN_ARRAY=$(echo "$BIN_ARRAY" | jq ". += [[\"${{ inputs.exe_name }}\", \"$alias\"]]")
+              fi
+            done
+            
+            # Add bin array to manifest
+            echo "$BIN_ARRAY" | jq -c '.' > bin_temp.json
+            jq --slurpfile bin_array bin_temp.json '. + {"bin": $bin_array[0]}' manifest.json > temp.json
+            rm bin_temp.json
             mv temp.json manifest.json
           else
-            # Only add app_name as alias if no custom aliases provided
-            jq --arg app_name "${{ inputs.app_name }}" \
-               '. + {"bin": [.bin, $app_name]}' manifest.json > temp.json
+            # Only add app_name as alias
+            jq --arg exe "${{ inputs.exe_name }}" \
+               --arg app_name "${{ inputs.app_name }}" \
+               '. + {"bin": [[$exe, $app_name]]}' manifest.json > temp.json
             mv temp.json manifest.json
           fi
 
