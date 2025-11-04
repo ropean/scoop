@@ -260,8 +260,15 @@ jobs:
             ALIASES_INPUT="${{ inputs.aliases }}"
             ALIASES_JSON=$(echo "$ALIASES_INPUT" | sed 's/[[:space:]]//g' | jq -R 'split(",") | map(select(length > 0))')
             
-            # Add aliases array to manifest
-            jq --argjson aliases "$ALIASES_JSON" '. + {"bin": [.bin] + $aliases}' manifest.json > temp.json
+            # Add app_name as default alias, then add custom aliases
+            jq --arg app_name "${{ inputs.app_name }}" \
+               --argjson aliases "$ALIASES_JSON" \
+               '. + {"bin": [.bin, $app_name] + $aliases}' manifest.json > temp.json
+            mv temp.json manifest.json
+          else
+            # Only add app_name as alias if no custom aliases provided
+            jq --arg app_name "${{ inputs.app_name }}" \
+               '. + {"bin": [.bin, $app_name]}' manifest.json > temp.json
             mv temp.json manifest.json
           fi
 
