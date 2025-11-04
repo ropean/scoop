@@ -258,8 +258,7 @@ jobs:
           if [ -n "${{ inputs.aliases }}" ]; then
             # Convert comma-separated string to array of alias pairs
             ALIASES_INPUT="${{ inputs.aliases }}"
-            # First create the app_name alias, then custom aliases
-            BIN_ARRAY="[[\"${{ inputs.exe_name }}\", \"${{ inputs.app_name }}\"]]"
+            BIN_ARRAY="[]"
             
             # Add custom aliases
             for alias in $(echo "$ALIASES_INPUT" | sed 's/[[:space:]]//g' | tr ',' '\n'); do
@@ -272,12 +271,6 @@ jobs:
             echo "$BIN_ARRAY" | jq -c '.' > bin_temp.json
             jq --slurpfile bin_array bin_temp.json '. + {"bin": $bin_array[0]}' manifest.json > temp.json
             rm bin_temp.json
-            mv temp.json manifest.json
-          else
-            # Only add app_name as alias
-            jq --arg exe "${{ inputs.exe_name }}" \
-               --arg app_name "${{ inputs.app_name }}" \
-               '. + {"bin": [[$exe, $app_name]]}' manifest.json > temp.json
             mv temp.json manifest.json
           fi
 
