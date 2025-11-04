@@ -61,6 +61,11 @@ on:
         required: false
         type: string
         default: ''
+      aliases:
+        description: 'Command aliases (comma-separated, e.g., "myapp,ma")'
+        required: false
+        type: string
+        default: ''
     secrets:
       deploy_key:
         description: 'Deploy key for pushing changes to https://github.com/ropean/scoop'
@@ -245,6 +250,18 @@ jobs:
           # Add notes if provided
           if [ -n "${{ inputs.notes }}" ]; then
             jq --arg notes "${{ inputs.notes }}" '. + {"notes": $notes}' manifest.json > temp.json
+            mv temp.json manifest.json
+          fi
+
+          # Add aliases if provided
+          if [ -n "${{ inputs.aliases }}" ]; then
+            # Convert comma-separated string to JSON array
+            # Remove spaces and split by comma
+            ALIASES_INPUT="${{ inputs.aliases }}"
+            ALIASES_JSON=$(echo "$ALIASES_INPUT" | sed 's/[[:space:]]//g' | jq -R 'split(",") | map(select(length > 0))')
+            
+            # Add aliases array to manifest
+            jq --argjson aliases "$ALIASES_JSON" '. + {"bin": [.bin] + $aliases}' manifest.json > temp.json
             mv temp.json manifest.json
           fi
 
