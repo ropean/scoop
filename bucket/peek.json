@@ -15,5 +15,14 @@
   "autoupdate": {
     "url": "https://github.com/ropean/peek/releases/download/v$version/peek-windows-x64.exe"
   },
+  "shortcuts": [
+    [
+      "peek-windows-x64.exe",
+      "peek",
+      "",
+      "",
+      "HTTP inspector"
+    ]
+  ],
   "notes": "Peek is a powerful tool for inspecting and testing HTTP requests."
 }
