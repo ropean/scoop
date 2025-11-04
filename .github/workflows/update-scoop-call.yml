@@ -218,13 +218,34 @@ jobs:
           # Position 3: icon file path (optional)
           # Position 4: description/tooltip (optional)
           if [ -n "${{ inputs.shortcut_name }}" ]; then
-            jq --arg exe "${{ inputs.exe_name }}" \
-               --arg name "${{ steps.defaults.outputs.SHORTCUT_NAME }}" \
-               --arg args "${{ inputs.shortcut_args }}" \
-               --arg icon "${{ inputs.shortcut_icon }}" \
-               --arg desc "${{ inputs.shortcut_description }}" \
-               '. + {"shortcuts": [[$exe, $name, $args, $icon, $desc]]}' \
-               manifest.json > temp.json
+            # Build shortcuts array dynamically based on which fields are provided
+            SHORTCUT_ARRAY="[\"${{ inputs.exe_name }}\", \"${{ steps.defaults.outputs.SHORTCUT_NAME }}\""
+            
+            # Check if we need to add optional fields (args, icon, or description)
+            HAS_ARGS="${{ inputs.shortcut_args }}"
+            HAS_ICON="${{ inputs.shortcut_icon }}"
+            HAS_DESC="${{ inputs.shortcut_description }}"
+            
+            # Determine if we need any optional fields
+            if [ -n "$HAS_ARGS" ] || [ -n "$HAS_ICON" ] || [ -n "$HAS_DESC" ]; then
+              # Add args (position 2)
+              SHORTCUT_ARRAY="$SHORTCUT_ARRAY, \"$HAS_ARGS\""
+              
+              # If icon or description exists, we need position 3
+              if [ -n "$HAS_ICON" ] || [ -n "$HAS_DESC" ]; then
+                SHORTCUT_ARRAY="$SHORTCUT_ARRAY, \"$HAS_ICON\""
+                
+                # If description exists, add position 4
+                if [ -n "$HAS_DESC" ]; then
+                  SHORTCUT_ARRAY="$SHORTCUT_ARRAY, \"$HAS_DESC\""
+                fi
+              fi
+            fi
+            
+            SHORTCUT_ARRAY="$SHORTCUT_ARRAY]"
+            
+            # Add shortcuts to manifest
+            jq --argjson shortcut "[$SHORTCUT_ARRAY]" '. + {"shortcuts": $shortcut}' manifest.json > temp.json
             mv temp.json manifest.json
           fi
 

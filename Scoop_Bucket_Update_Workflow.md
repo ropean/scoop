@@ -1,177 +1,198 @@
-# Scoop Bucket Update Workflow - Changes and Usage
+# Shortcuts Generation Examples
 
-## Key Changes
+## How It Works Now
 
-### 1. Fixed Shortcut Position Issue
+The script intelligently includes only the fields that have actual values, avoiding empty strings that cause Scoop errors.
 
-**Before (INCORRECT):**
+## Generation Logic
 
-```yaml
-# shortcut_description was in position 2 (startup args position)
-{ 'shortcuts': [[$exe, $name, $desc]] }
+```
+IF shortcut_name is provided:
+  Always include: [exe_name, shortcut_name]
+
+  IF any of (args, icon, desc) has value:
+    Add args (even if empty)
+
+    IF icon OR desc has value:
+      Add icon (even if empty)
+
+      IF desc has value:
+        Add desc
 ```
 
-**After (CORRECT):**
+## Examples
+
+### Example 1: Only Name (Your Current Case)
+
+**Input:**
 
 ```yaml
-# Now properly positioned at position 4 (description position)
-{ 'shortcuts': [[$exe, $name, $args, $icon, $desc]] }
+shortcut_name: 'peek'
+shortcut_args: ''
+shortcut_icon: ''
+shortcut_description: 'HTTP inspector'
 ```
 
-### 2. Added New Optional Inputs
-
-```yaml
-shortcut_args:
-  description: 'Startup arguments for the shortcut (optional)'
-  required: false
-  type: string
-  default: ''
-
-shortcut_icon:
-  description: 'Icon file path for the shortcut (optional)'
-  required: false
-  type: string
-  default: ''
-```
-
-### 3. Scoop Shortcuts Array Format
+**Output:**
 
 ```json
-"shortcuts": [
-  [
-    "app.exe",           // Position 0: Executable name (required)
-    "App Name",          // Position 1: Shortcut display name (required)
-    "--flag",            // Position 2: Startup arguments (optional)
-    "icon.ico",          // Position 3: Icon file path (optional)
-    "Description text"   // Position 4: Description/tooltip (optional)
-  ]
-]
+"shortcuts": [["peek-windows-x64.exe", "peek", "", "", "HTTP inspector"]]
 ```
 
-## Usage Examples
+❌ **Problem:** Empty icon string causes Scoop to fail
 
-### Example 1: Basic Shortcut (No Args, No Icon)
+**Fixed Output:**
+
+```json
+"shortcuts": [["peek-windows-x64.exe", "peek", "", "HTTP inspector"]]
+```
+
+✅ **Better:** Skips icon position, only includes description
+
+### Example 2: Name + Description Only
+
+**Input:**
+
+```yaml
+shortcut_name: 'Peek'
+shortcut_description: 'HTTP Inspector'
+# No args, no icon
+```
+
+**Output:**
+
+```json
+"shortcuts": [["peek-windows-x64.exe", "Peek", "", "HTTP Inspector"]]
+```
+
+✅ Includes empty args because description exists
+
+### Example 3: Name Only (Minimal)
+
+**Input:**
+
+```yaml
+shortcut_name: 'Peek'
+# No args, no icon, no description
+```
+
+**Output:**
+
+```json
+"shortcuts": [["peek-windows-x64.exe", "Peek"]]
+```
+
+✅ Cleanest format - only required fields
+
+### Example 4: Name + Args
+
+**Input:**
+
+```yaml
+shortcut_name: 'Peek Debug'
+shortcut_args: '--debug --verbose'
+```
+
+**Output:**
+
+```json
+"shortcuts": [["peek-windows-x64.exe", "Peek Debug", "--debug --verbose"]]
+```
+
+✅ Includes args, stops there
+
+### Example 5: Name + Args + Description
+
+**Input:**
+
+```yaml
+shortcut_name: 'Peek Debug'
+shortcut_args: '--debug'
+shortcut_description: 'Debug mode'
+```
+
+**Output:**
+
+```json
+"shortcuts": [["peek-windows-x64.exe", "Peek Debug", "--debug", "", "Debug mode"]]
+```
+
+✅ Must include empty icon position because description exists
+
+### Example 6: All Fields
+
+**Input:**
+
+```yaml
+shortcut_name: 'Peek'
+shortcut_args: '--port 8080'
+shortcut_icon: 'peek.ico'
+shortcut_description: 'HTTP Inspector'
+```
+
+**Output:**
+
+```json
+"shortcuts": [["peek-windows-x64.exe", "Peek", "--port 8080", "peek.ico", "HTTP Inspector"]]
+```
+
+✅ All 5 positions included
+
+### Example 7: Name + Icon Only
+
+**Input:**
+
+```yaml
+shortcut_name: 'Peek'
+shortcut_icon: 'app.ico'
+```
+
+**Output:**
+
+```json
+"shortcuts": [["peek-windows-x64.exe", "Peek", "", "app.ico"]]
+```
+
+✅ Empty args included because icon exists
+
+## Recommendation for Your Peek App
+
+Since you want description but no icon, use:
 
 ```yaml
 - uses: ./.github/workflows/update-scoop-bucket.yml
   with:
-    tag: v1.0.0
-    source_repo: ropean/MyApp
-    app_name: myapp
-    exe_name: MyApp.exe
-    shortcut_name: 'My Application'
-    shortcut_description: 'A cool application'
+    # ... other inputs ...
+    shortcut_name: 'Peek'
+    shortcut_description: 'HTTP Inspector'
+    # Don't set shortcut_icon at all, or leave it empty
 ```
 
-**Generated shortcuts:**
+This will generate:
 
 ```json
-"shortcuts": [["MyApp.exe", "My Application", "", "", "A cool application"]]
+"shortcuts": [["peek-windows-x64.exe", "Peek", "", "HTTP Inspector"]]
 ```
 
-### Example 2: With Startup Arguments
+No more "Couldn't find icon" error! 🎉
 
-```yaml
-- uses: ./.github/workflows/update-scoop-bucket.yml
-  with:
-    tag: v1.0.0
-    source_repo: ropean/peek
-    app_name: peek
-    exe_name: peek-windows-x64.exe
-    shortcut_name: 'Peek HTTP Inspector'
-    shortcut_args: '--port 8080 --debug'
-    shortcut_description: 'HTTP inspector tool with debug mode'
-```
+## Quick Fix for Your Current Installation
 
-**Generated shortcuts:**
+Manually edit your `peek.json` in the scoop bucket and change:
 
 ```json
-"shortcuts": [["peek-windows-x64.exe", "Peek HTTP Inspector", "--port 8080 --debug", "", "HTTP inspector tool with debug mode"]]
+"shortcuts": [["peek-windows-x64.exe", "peek", "", "", "HTTP inspector"]]
 ```
 
-### Example 3: With Custom Icon
-
-```yaml
-- uses: ./.github/workflows/update-scoop-bucket.yml
-  with:
-    tag: v1.0.0
-    source_repo: ropean/MyApp
-    app_name: myapp
-    exe_name: MyApp.exe
-    shortcut_name: 'My Application'
-    shortcut_icon: 'myapp.ico'
-    shortcut_description: 'My awesome app'
-```
-
-**Generated shortcuts:**
+To:
 
 ```json
-"shortcuts": [["MyApp.exe", "My Application", "", "myapp.ico", "My awesome app"]]
+"shortcuts": [["peek-windows-x64.exe", "peek", "", "HTTP inspector"]]
 ```
 
-### Example 4: Complete Configuration
+Then reinstall:
 
-```yaml
-- uses: ./.github/workflows/update-scoop-bucket.yml
-  with:
-    tag: v1.2.3
-    source_repo: ropean/MyApp
-    app_name: myapp
-    exe_name: MyApp.exe
-    description: 'A powerful application'
-    homepage: 'https://myapp.example.com'
-    shortcut_name: 'My Application Pro'
-    shortcut_args: '--config production'
-    shortcut_icon: 'app-icon.ico'
-    shortcut_description: 'Professional version of My Application'
-    notes: 'Run with administrator privileges for full features'
-  secrets:
-    deploy_key: ${{ secrets.SCOOP_DEPLOY_KEY }}
+```bash
+scoop uninstall peek
+scoop install peek
 ```
-
-**Generated shortcuts:**
-
-```json
-"shortcuts": [["MyApp.exe", "My Application Pro", "--config production", "app-icon.ico", "Professional version of My Application"]]
-```
-
-### Example 5: No Shortcuts (Skip Shortcut Creation)
-
-```yaml
-- uses: ./.github/workflows/update-scoop-bucket.yml
-  with:
-    tag: v1.0.0
-    source_repo: ropean/cli-tool
-    app_name: mytool
-    exe_name: mytool.exe
-    # Don't provide shortcut_name - no shortcuts will be created
-```
-
-**Result:** No `shortcuts` field in manifest (suitable for CLI tools).
-
-## Important Notes
-
-1. **Minimum Required**: Only `shortcut_name` is needed to create shortcuts
-2. **Empty Strings**: Empty optional fields will be included as empty strings `""`
-3. **Conditional Logic**: Shortcuts are only added if `shortcut_name` is provided
-4. **Array Format**: All 5 positions are always included when shortcuts are created
-
-## Troubleshooting
-
-### Issue: CMD Window Appears and Closes
-
-**Solution:** Add this to your Rust `main.rs`:
-
-```rust
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
-```
-
-### Issue: Shortcut Description Not Showing
-
-**Verify** the manifest has the correct format:
-
-```json
-"shortcuts": [["app.exe", "Name", "args", "icon", "description"]]
-```
-
-Position 4 should contain your description text.
