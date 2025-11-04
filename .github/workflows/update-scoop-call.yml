@@ -47,17 +47,12 @@ on:
         type: string
         default: ''
       shortcut_args:
-        description: 'Startup arguments for the shortcut (optional)'
+        description: 'Startup arguments for the shortcut (optional, position 2)'
         required: false
         type: string
         default: ''
       shortcut_icon:
-        description: 'Icon file path for the shortcut (optional)'
-        required: false
-        type: string
-        default: ''
-      shortcut_description:
-        description: 'Shortcut description/tooltip'
+        description: 'Icon file path for the shortcut (optional, position 3)'
         required: false
         type: string
         default: ''
@@ -211,41 +206,39 @@ jobs:
           EOF
 
           # Add shortcuts if shortcut_name is provided
-          # Scoop shortcuts format: [exe, name, args, icon, description]
-          # Position 0: executable name (required)
-          # Position 1: shortcut display name (required)
+          # Based on Scoop source code: lib/shortcuts.ps1
+          # Scoop ONLY supports 4 positions: [exe, name, args, icon]
+          # Position 0: executable path (required)
+          # Position 1: shortcut name (required)
           # Position 2: startup arguments (optional)
           # Position 3: icon file path (optional)
-          # Position 4: description/tooltip (optional)
+          # IMPORTANT: There is NO position 4 for description in Scoop!
           if [ -n "${{ inputs.shortcut_name }}" ]; then
-            # Build shortcuts array dynamically based on which fields are provided
-            SHORTCUT_ARRAY="[\"${{ inputs.exe_name }}\", \"${{ steps.defaults.outputs.SHORTCUT_NAME }}\""
-            
-            # Check if we need to add optional fields (args, icon, or description)
-            HAS_ARGS="${{ inputs.shortcut_args }}"
             HAS_ICON="${{ inputs.shortcut_icon }}"
-            HAS_DESC="${{ inputs.shortcut_description }}"
+            HAS_ARGS="${{ inputs.shortcut_args }}"
             
-            # Determine if we need any optional fields
-            if [ -n "$HAS_ARGS" ] || [ -n "$HAS_ICON" ] || [ -n "$HAS_DESC" ]; then
-              # Add args (position 2)
-              SHORTCUT_ARRAY="$SHORTCUT_ARRAY, \"$HAS_ARGS\""
-              
-              # If icon or description exists, we need position 3
-              if [ -n "$HAS_ICON" ] || [ -n "$HAS_DESC" ]; then
-                SHORTCUT_ARRAY="$SHORTCUT_ARRAY, \"$HAS_ICON\""
-                
-                # If description exists, add position 4
-                if [ -n "$HAS_DESC" ]; then
-                  SHORTCUT_ARRAY="$SHORTCUT_ARRAY, \"$HAS_DESC\""
-                fi
-              fi
+            if [ -n "$HAS_ICON" ]; then
+              # Has icon - must include args position (even if empty)
+              jq --arg exe "${{ inputs.exe_name }}" \
+                 --arg name "${{ steps.defaults.outputs.SHORTCUT_NAME }}" \
+                 --arg args "$HAS_ARGS" \
+                 --arg icon "$HAS_ICON" \
+                 '. + {"shortcuts": [[$exe, $name, $args, $icon]]}' \
+                 manifest.json > temp.json
+            elif [ -n "$HAS_ARGS" ]; then
+              # Has args but no icon - 3 positions
+              jq --arg exe "${{ inputs.exe_name }}" \
+                 --arg name "${{ steps.defaults.outputs.SHORTCUT_NAME }}" \
+                 --arg args "$HAS_ARGS" \
+                 '. + {"shortcuts": [[$exe, $name, $args]]}' \
+                 manifest.json > temp.json
+            else
+              # Only exe and name - 2 positions (most common for GUI apps)
+              jq --arg exe "${{ inputs.exe_name }}" \
+                 --arg name "${{ steps.defaults.outputs.SHORTCUT_NAME }}" \
+                 '. + {"shortcuts": [[$exe, $name]]}' \
+                 manifest.json > temp.json
             fi
-            
-            SHORTCUT_ARRAY="$SHORTCUT_ARRAY]"
-            
-            # Add shortcuts to manifest
-            jq --argjson shortcut "[$SHORTCUT_ARRAY]" '. + {"shortcuts": $shortcut}' manifest.json > temp.json
             mv temp.json manifest.json
           fi
 
