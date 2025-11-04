@@ -18,10 +18,7 @@
   "shortcuts": [
     [
       "peek-windows-x64.exe",
-      "peek",
-      "",
-      "",
-      "HTTP inspector"
+      "peek"
     ]
   ],
   "notes": "Peek is a powerful tool for inspecting and testing HTTP requests."
