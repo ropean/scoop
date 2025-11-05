@@ -8,7 +8,12 @@
   },
   "url": "https://github.com/ropean/peek/releases/download/v1.1.4/peek-windows-x64.exe",
   "hash": "ff77203838d139ddd34064cb32706679f9e133f628096b2020894307c8212511",
-  "bin": "peek-windows-x64.exe",
+  "bin": [
+    [
+      "peek-windows-x64.exe",
+      "peek"
+    ]
+  ],
   "checkver": {
     "github": "ropean/peek"
   },
